@@ -1,7 +1,6 @@
-# Tugas 1
-
-Membuat Video Tutorial Membuat Web Statis Menggunakan Jupyter-book
-![Tugas](../images/Untitled.png)
+# Tugas Pendahuluan
+## Membuat Video Tutorial Membuat Web Statis Menggunakan Jupyter-book
+![Tugas](../tugas/Untitled.png)
 
 ## Hasil
 

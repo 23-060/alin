@@ -19,4 +19,4 @@
 11. Ganti Branch ke Branch yg kita gunakan tadi
 12. Tunggu Proses Deploy nya selesai
 
-[Berikut Adalah Hasil Dari Tugas Video Saya](https://www.youtube.com/watch?v=iWBcHd-rWlo)
+[Link To Youtube](https://www.youtube.com/watch?v=iWBcHd-rWlo)

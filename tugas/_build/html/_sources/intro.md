@@ -1,6 +1,6 @@
 # Selamat Datang Di Jupyter-book Saya
 
-Halo, Perkenalkan Saya Muhammad Rafi Lazuardi Dengan NIM 23-060 [Berikut ini adalah akun Github Saya](https://github.com/23-060) Untuk Informasi Lebih Lanjut
+Halo, Selamat Datang Di Jupyter-book Saya, Sebelumnya Perkenalkan Saya Muhammad Rafi Lazuardi Dengan NIM 23-060, [23-060](https://github.com/23-060) adalah akun GitHub saya
 
 Berikut adalah tugas saya
 

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Tugas 2 &#8212; My sample book</title>
+    <title>Materi &amp; Tugas Pertemuan 3 &#8212; My sample book</title>
   
   
   
@@ -178,7 +178,7 @@
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Tugas%20Pendahuluan.html">Tugas Pendahuluan</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas%201.html">Tugas 1</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Tugas 2</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Materi &amp; Tugas Pertemuan 3</a></li>
 </ul>
 
     </div>
@@ -351,7 +351,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -362,11 +364,26 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Tugas 2</h1>
+    <h1>Materi & Tugas Pertemuan 3</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-matrix-menggunakan-program">Menghitung matrix menggunakan Program</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cara-menentukan-matrix-secara-random-menggunakan-progam-python">Cara Menentukan Matrix Secara Random menggunakan progam python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cara-menentukan-matrix-secara-manual-menggunakan-program-python">Cara menentukan Matrix Secara Manual Menggunakan Program python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cara-mengubah-matrix-menjadi-matrix-transpose-menggunakan-program-python">Cara Mengubah matrix menjadi matrix transpose menggunakan program python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cara-mengetahui-shape-matrix-menggunakan-program-python">Cara Mengetahui Shape Matrix Menggunakan Program Python</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-materi-pertemuan-3">TUGAS MATERI PERTEMUAN 3</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -376,8 +393,237 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="tugas-2">
-<h1>Tugas 2<a class="headerlink" href="#tugas-2" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="materi-tugas-pertemuan-3">
+<h1>Materi &amp; Tugas Pertemuan 3<a class="headerlink" href="#materi-tugas-pertemuan-3" title="Link to this heading">#</a></h1>
+<section id="menghitung-matrix-menggunakan-program">
+<h2>Menghitung matrix menggunakan Program<a class="headerlink" href="#menghitung-matrix-menggunakan-program" title="Link to this heading">#</a></h2>
+<section id="cara-menentukan-matrix-secara-random-menggunakan-progam-python">
+<h3>Cara Menentukan Matrix Secara Random menggunakan progam python<a class="headerlink" href="#cara-menentukan-matrix-secara-random-menggunakan-progam-python" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>kita memanggil numpy dan random menggunakan syntax
+[import numpy] &amp; [import Random]
+import gunanya untuk kita memanggil file lain dalam satu modul,
+numpy dan random adalah sebuah library yang bisa di panggil</p></li>
+<li><p>kita membuat matrix menggunakan syntax
+[ “A = numpy.random.randint(10, size=(3,3))” ]
+Kita membuat Variabel “A”, dengan isi “numpy.random.ranint(10, size=(3,0)),
+disini kegunaan dari randint sendiri adalah untuk mengacak angka, dan 10 adalah batas dari acak angka randint,
+size=(3,3) adalah ukuran kolom baris sebuah matrix</p></li>
+</ol>
+</section>
+<section id="cara-menentukan-matrix-secara-manual-menggunakan-program-python">
+<h3>Cara menentukan Matrix Secara Manual Menggunakan Program python<a class="headerlink" href="#cara-menentukan-matrix-secara-manual-menggunakan-program-python" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>kita memanggil library numpy menggunakan syntax
+[import numpy]
+import gunanya untuk kita memanggil file lain dalam satu modul,
+numpy adalah sebuah library yang bisa di panggil</p></li>
+<li><p>kita membuat matrix secara manual menggunakan syntax
+[ A = numpy.array([[3,0,4],[-1,-2,-1]]) ]
+kita membuat variable “A”, dengan isi numpy.array
+numpy adalah library yang sudah kita panggil tadi, dan array kegunaannya untuk memudahkan operasi komputasi tipe data numerik seperti penjumlahan, pengurangan, perkalian, pangkat, dan operasi lainnya yang bisa diterapkan pada vektor atau matrix
+dan kita memberi angka untuk kolom dan baris pada matrix</p></li>
+</ol>
+</section>
+<section id="cara-mengubah-matrix-menjadi-matrix-transpose-menggunakan-program-python">
+<h3>Cara Mengubah matrix menjadi matrix transpose menggunakan program python<a class="headerlink" href="#cara-mengubah-matrix-menjadi-matrix-transpose-menggunakan-program-python" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Menentukan Matrix mana yang ingin di transpose, dan beri syntax
+[A.transpose()]
+Syntax “transpose()” digunakan untuk menghasilkan transpos dari matriks A. Transpos suatu matriks adalah operasi yang mengubah baris matriks menjadi kolom dan sebaliknya. Dengan kata lain, elemen pada baris ke-i dan kolom ke-j dari matriks asli akan menjadi elemen pada baris ke-j dan kolom ke-i dalam matriks transpos.</p></li>
+</ol>
+</section>
+<section id="cara-mengetahui-shape-matrix-menggunakan-program-python">
+<h3>Cara Mengetahui Shape Matrix Menggunakan Program Python<a class="headerlink" href="#cara-mengetahui-shape-matrix-menggunakan-program-python" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Menentukan variable matrix mana yang ingin di ketahui shape nya, dan tambahkan syntax
+[A.Shape]
+Shape digunakan untuk mendapatkan tuple yang menyatakan dimensi dari array/matriks A. Dalam konteks NumPy atau library lain yang mendukung atribut shape, A.shape memberikan informasi tentang jumlah baris dan kolom</p></li>
+</ol>
+</section>
+</section>
+<section id="tugas-materi-pertemuan-3">
+<h2>TUGAS MATERI PERTEMUAN 3<a class="headerlink" href="#tugas-materi-pertemuan-3" title="Link to this heading">#</a></h2>
+<p>Mengalikan Matrix Menggunakan Python</p>
+<p>import numpy as np
+import random</p>
+<p>A = np.random.randint(10, size=(3, 3))
+B = np.random.randint(10, size=(3, 3))
+C = np.random.randint(10, size=(3, 3))
+D = np.random.randint(10, size=(3, 3))</p>
+<p>Hasil_awal = np.dot(A, B)
+Hasil_awal = np.dot(Hasil_awal, C)
+Hasil_akhir = np.dot(Hasil_awal, D)</p>
+<p>print(“Matrix A:”)
+print(A)
+print(“\nMatrix B:”)
+print(B)
+print(“\nMatrix C:”)
+print(C)
+print(“\nMatrix D:”)
+print(D)
+print(“\nHasil akhir perkalian matriks:”)
+print(Hasil_akhir)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># array ditentukan secara manual &amp; Random</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">random</span>
+
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">],[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
+<span class="n">C</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">D</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">],[</span><span class="mi">6</span><span class="p">]])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matrix A&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matrix B&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">B</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matrix C&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">C</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matrix D&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">D</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matrix A
+[[9 1 4]
+ [7 4 7]
+ [0 1 1]] 
+
+Matrix B
+[[ 3  0  4]
+ [-1 -2 -1]] 
+
+Matrix C
+[[8 6]
+ [2 9]
+ [1 4]] 
+
+Matrix D
+[[2]
+ [6]] 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># operasi matrix</span>
+
+<span class="c1"># C dan d adalah konnstanta</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">d</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">A1</span> <span class="o">=</span> <span class="p">(</span><span class="n">c</span> <span class="o">+</span> <span class="n">d</span><span class="p">)</span> <span class="o">*</span> <span class="n">A</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A1</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">A2</span> <span class="o">=</span> <span class="p">(</span><span class="n">c</span><span class="o">*</span><span class="n">A</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="n">d</span><span class="o">*</span><span class="n">A</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A2</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[54  6 24]
+ [42 24 42]
+ [ 0  6  6]] 
+
+[[54  6 24]
+ [42 24 42]
+ [ 0  6  6]] 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Transpose matriks</span>
+<span class="n">A_T</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
+<span class="n">C_T</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Lakukan perkalian matriks</span>
+<span class="n">TRANS</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">C</span><span class="p">,</span> <span class="n">C_T</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Mengetahui Shape pada Matrix</span>
+<span class="n">C</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(3, 2)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TUGAS MENGALIKAN MATRIX MENGGUNAKAN PROGRAM PYTHON</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">random</span>
+
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="n">C</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="n">D</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+
+<span class="c1"># Melakukan Pengalian Secara Bertahap</span>
+<span class="n">Hasil_awal</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
+<span class="n">Hasil_awal</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">Hasil_awal</span><span class="p">,</span> <span class="n">C</span><span class="p">)</span>
+<span class="n">Hasil_akhir</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">Hasil_awal</span><span class="p">,</span> <span class="n">D</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matrix A:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Matrix B:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Matrix C:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">C</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Matrix D:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">D</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Hasil akhir perkalian matriks:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Hasil_akhir</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matrix A:
+[[6 8 0]
+ [2 8 7]
+ [1 0 8]]
+
+Matrix B:
+[[4 0 7]
+ [2 9 3]
+ [6 5 5]]
+
+Matrix C:
+[[3 0 9]
+ [3 3 6]
+ [4 8 3]]
+
+Matrix D:
+[[8 0 2]
+ [5 7 2]
+ [3 9 8]]
+
+Hasil akhir perkalian matriks:
+[[11490 14118 10608]
+ [15378 19430 15072]
+ [ 8739 11113  8712]]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -426,7 +672,27 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"></div>
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-matrix-menggunakan-program">Menghitung matrix menggunakan Program</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cara-menentukan-matrix-secara-random-menggunakan-progam-python">Cara Menentukan Matrix Secara Random menggunakan progam python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cara-menentukan-matrix-secara-manual-menggunakan-program-python">Cara menentukan Matrix Secara Manual Menggunakan Program python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cara-mengubah-matrix-menjadi-matrix-transpose-menggunakan-program-python">Cara Mengubah matrix menjadi matrix transpose menggunakan program python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cara-mengetahui-shape-matrix-menggunakan-program-python">Cara Mengetahui Shape Matrix Menggunakan Program Python</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-materi-pertemuan-3">TUGAS MATERI PERTEMUAN 3</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

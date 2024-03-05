@@ -176,7 +176,10 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Tugas%20Pendahuluan.html">Tugas Pendahuluan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas%20Pendahuluan.html">Materi &amp; Tugas Pertemuan 1</a></li>
+
+
+
 <li class="toctree-l1"><a class="reference internal" href="Tugas%201.html">Materi &amp; Tugas Pertemuan 2</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Materi &amp; Tugas Pertemuan 3</a></li>
 </ul>
@@ -525,57 +528,41 @@ Shape digunakan untuk mendapatkan tuple yang menyatakan dimensi dari array/matri
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
-<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
-<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
-<span class="n">C</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
-<span class="n">D</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 
 
-<span class="n">Kumpulan_matrix</span> <span class="o">=</span> <span class="p">[</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">D</span><span class="p">]</span>
+
+<span class="n">Kumpulan_matrix</span> <span class="o">=</span> <span class="p">[</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">]</span>
 
 <span class="n">hasil</span> <span class="o">=</span> <span class="n">Kumpulan_matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
 <span class="k">for</span> <span class="n">matrix</span> <span class="ow">in</span> <span class="n">Kumpulan_matrix</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
-    <span class="n">hasil_akhir</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">hasil</span><span class="p">,</span> <span class="n">matrix</span><span class="p">)</span>
+    <span class="n">hasil</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">hasil</span><span class="p">,</span> <span class="n">matrix</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matrix A:&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Matrix B:&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Matrix C:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">C</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Matrix D:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">D</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Hasil akhir perkalian matriks:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">hasil_akhir</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">hasil</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matrix A:
-[[0 6 6]
- [6 1 2]
- [4 0 0]]
+[[4 2]
+ [3 3]
+ [5 1]]
 
 Matrix B:
-[[6 7 2]
- [2 9 4]
- [9 5 5]]
-
-Matrix C:
-[[5 2 9]
- [6 0 1]
- [8 9 2]]
-
-Matrix D:
-[[1 6 1]
- [2 1 5]
- [8 7 0]]
+[[1 8 9]
+ [1 2 5]]
 
 Hasil akhir perkalian matriks:
-[[ 8790 13716  4356]
- [ 6482  9789  2584]
- [ 2672  4052   952]]
+[[ 6 36 46]
+ [ 6 30 42]
+ [ 6 42 50]]
 </pre></div>
 </div>
 </div>

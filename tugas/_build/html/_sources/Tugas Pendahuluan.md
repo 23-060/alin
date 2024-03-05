@@ -1,4 +1,5 @@
-# Tugas Pendahuluan
+### Materi & Tugas Pertemuan 1
+## Tugas Pendahuluan
 ## Membuat Video Tutorial Membuat Web Statis Menggunakan Jupyter-book
 ![Tugas](../tugas/Untitled.png)
 

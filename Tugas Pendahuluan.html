@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Materi &amp; Tugas Pertemuan 1 &#8212; My sample book</title>
+    <title>Sistem Persamaan Linier &#8212; My sample book</title>
   
   
   
@@ -57,10 +57,12 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Tugas Pendahuluan';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Materi &amp; Tugas Pertemuan 2" href="Tugas%201.html" />
+    <link rel="next" title="Eliminasi Gaus" href="Tugas%201.html" />
     <link rel="prev" title="Selamat Datang Di Jupyter-book Saya" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -150,8 +152,8 @@
       
     
     
-    <img src="_static/logoUTM.png" class="logo__image only-light" alt="My sample book - Home"/>
-    <script>document.write(`<img src="_static/logoUTM.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+    <img src="_static/AljabarLinier.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/AljabarLinier.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
   
   
 </a></div>
@@ -177,12 +179,9 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Materi &amp; Tugas Pertemuan 1</a></li>
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="Tugas%201.html">Materi &amp; Tugas Pertemuan 2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Tugas%202.html">Materi &amp; Tugas Pertemuan 3</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Sistem Persamaan Linier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas%201.html">Eliminasi Gaus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas%202.html">Aljabar Matrix</a></li>
 </ul>
 
     </div>
@@ -229,6 +228,37 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/23-060/alin/blob/main/tugas/Tugas Pendahuluan.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -237,7 +267,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+      <li><a href="https://github.com/23-060/alin" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -254,7 +284,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FTugas Pendahuluan.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/23-060/alin/issues/new?title=Issue%20on%20page%20%2FTugas Pendahuluan.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -284,7 +314,7 @@
       
       
       
-      <li><a href="_sources/Tugas Pendahuluan.md" target="_blank"
+      <li><a href="_sources/Tugas Pendahuluan.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -294,7 +324,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -368,7 +398,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Materi & Tugas Pertemuan 1</h1>
+    <h1>Sistem Persamaan Linier</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -378,12 +408,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Materi &amp; Tugas Pertemuan 1</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-pendahuluan">Tugas Pendahuluan</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-video-tutorial-membuat-web-statis-menggunakan-jupyter-book">Membuat Video Tutorial Membuat Web Statis Menggunakan Jupyter-book</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil">Hasil</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-persamaan-linier-sederhana">Contoh Persamaan Linier Sederhana</a></li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -394,35 +420,30 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="materi-tugas-pertemuan-1">
-<h1>Materi &amp; Tugas Pertemuan 1<a class="headerlink" href="#materi-tugas-pertemuan-1" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="sistem-persamaan-linier">
+<h1>Sistem Persamaan Linier<a class="headerlink" href="#sistem-persamaan-linier" title="Link to this heading">#</a></h1>
+<p>Sistem persamaan linear adalah kumpulan persamaan linear yang berisi beberapa variabel. Persamaan-persamaan ini saling terkait dan biasanya dipecahkan bersama-sama untuk menemukan solusi yang memenuhi semua persamaan dalam sistem tersebut</p>
+<section id="contoh-persamaan-linier-sederhana">
+<h2>Contoh Persamaan Linier Sederhana<a class="headerlink" href="#contoh-persamaan-linier-sederhana" title="Link to this heading">#</a></h2>
+<p>Berikut adalah Contoh dari persamaan liner Satu Variabel:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    2x + 3 = o\\
+\end{split}\]</div>
+<p>Berikut adalah Contoh Dari persamaan Linier Dua Variabel:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+2x - 3y = 8 \\
+4x + y = 7\\
+\end{split}\]</div>
+<p>Berikut adalah Contoh Dari persamaan linier tiga variabel:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+2x + 3y - z = 10 \\
+x - 2y + 2z = -1 \\ 
+3x + y + 4z = 5 \\
+\end{split}\]</div>
 </section>
-<section id="tugas-pendahuluan">
-<h1>Tugas Pendahuluan<a class="headerlink" href="#tugas-pendahuluan" title="Link to this heading">#</a></h1>
-</section>
-<section id="membuat-video-tutorial-membuat-web-statis-menggunakan-jupyter-book">
-<h1>Membuat Video Tutorial Membuat Web Statis Menggunakan Jupyter-book<a class="headerlink" href="#membuat-video-tutorial-membuat-web-statis-menggunakan-jupyter-book" title="Link to this heading">#</a></h1>
-<p><img alt="Tugas" src="_images/Untitled.png" /></p>
-</section>
-<section id="hasil">
-<h1>Hasil<a class="headerlink" href="#hasil" title="Link to this heading">#</a></h1>
-<ol class="arabic simple">
-<li><p>Membuat Repositories</p></li>
-<li><p>Beri Readme pada Repositories</p></li>
-<li><p>Buat File baru bernama “.nojekyll” (gunanya agar membari github agar tidak membangun html)</p></li>
-<li><p>Masuk Ke Codespace</p></li>
-<li><p>Ketik di Terimal “pip install jupyter-book”</p></li>
-<li><p>Buat Folder baru menggunakan command “Jupyter-book Create (nama folder)”</p></li>
-<li><p>Edit bagian yang ingin di edit</p></li>
-<li><p>Build Foldernya menggunakan command “jupyter-book build (nama folder)”</p></li>
-<li><p>pindah Folder HTML nya di luar folder tugas</p></li>
-<li><p>Commit &amp; Sync (jangan lupa diberi pesan pada commit nya)</p></li>
-<li><p>Pindah ke Repository dan ke Setting</p></li>
-<li><p>Pilih Bagian Pages</p></li>
-<li><p>Ganti Branch ke Branch yg kita gunakan tadi</p></li>
-<li><p>Tunggu Proses Deploy nya selesai</p></li>
-</ol>
-<p><a class="reference external" href="https://www.youtube.com/watch?v=iWBcHd-rWlo">Link To Youtube</a></p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -469,7 +490,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Materi &amp; Tugas Pertemuan 2</p>
+        <p class="prev-next-title">Eliminasi Gaus</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -489,12 +510,8 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Materi &amp; Tugas Pertemuan 1</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-pendahuluan">Tugas Pendahuluan</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-video-tutorial-membuat-web-statis-menggunakan-jupyter-book">Membuat Video Tutorial Membuat Web Statis Menggunakan Jupyter-book</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil">Hasil</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-persamaan-linier-sederhana">Contoh Persamaan Linier Sederhana</a></li>
 </ul>
-
   </nav></div>
 
 </div></div>

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Materi &amp; Tugas Pertemuan 3 &#8212; My sample book</title>
+    <title>Aljabar Matrix &#8212; My sample book</title>
   
   
   
@@ -60,7 +60,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Tugas 2';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Materi &amp; Tugas Pertemuan 2" href="Tugas%201.html" />
+    <link rel="prev" title="Eliminasi Gaus" href="Tugas%201.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -149,8 +149,8 @@
       
     
     
-    <img src="_static/logoUTM.png" class="logo__image only-light" alt="My sample book - Home"/>
-    <script>document.write(`<img src="_static/logoUTM.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+    <img src="_static/AljabarLinier.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/AljabarLinier.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
   
   
 </a></div>
@@ -176,12 +176,9 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Tugas%20Pendahuluan.html">Materi &amp; Tugas Pertemuan 1</a></li>
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="Tugas%201.html">Materi &amp; Tugas Pertemuan 2</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Materi &amp; Tugas Pertemuan 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas%20Pendahuluan.html">Sistem Persamaan Linier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas%201.html">Eliminasi Gaus</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Aljabar Matrix</a></li>
 </ul>
 
     </div>
@@ -228,6 +225,37 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/23-060/alin/blob/main/tugas/Tugas 2.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -236,7 +264,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+      <li><a href="https://github.com/23-060/alin" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -253,7 +281,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FTugas 2.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/23-060/alin/issues/new?title=Issue%20on%20page%20%2FTugas 2.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -367,7 +395,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Materi & Tugas Pertemuan 3</h1>
+    <h1>Aljabar Matrix</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -396,8 +424,27 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="materi-tugas-pertemuan-3">
-<h1>Materi &amp; Tugas Pertemuan 3<a class="headerlink" href="#materi-tugas-pertemuan-3" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="aljabar-matrix">
+<h1>Aljabar Matrix<a class="headerlink" href="#aljabar-matrix" title="Link to this heading">#</a></h1>
+<p>Aljabar matriks adalah cabang aljabar yang mempelajari matriks, yaitu susunan bilangan-bilangan (elemen) dalam baris dan kolom. Matriks dapat digunakan untuk merepresentasikan sistem persamaan linear, transformasi linier, dan berbagai konsep matematika lainnya.</p>
+<p>Berikut adalah contoh dari Aljabar Matriks :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[6 3 0]
+ [5 4 6]
+ [5 1 8]]
+</pre></div>
+</div>
+</div>
+</div>
 <section id="menghitung-matrix-menggunakan-program">
 <h2>Menghitung matrix menggunakan Program<a class="headerlink" href="#menghitung-matrix-menggunakan-program" title="Link to this heading">#</a></h2>
 <section id="cara-menentukan-matrix-secara-manual-menggunakan-program-python">
@@ -454,9 +501,9 @@ size=(3,3) adalah ukuran kolom baris sebuah matrix</p></li>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0 5 0]
- [3 8 0]
- [5 7 8]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[2 9 4]
+ [8 7 0]
+ [5 4 0]]
 </pre></div>
 </div>
 </div>
@@ -485,13 +532,13 @@ Syntax “transpose()” digunakan untuk menghasilkan transpos dari matriks A. T
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matrix A
-[[9 5 1]
- [4 8 9]
- [1 1 8]]
+[[4 2 0]
+ [0 1 5]
+ [7 7 7]]
 Matrix A yang sudah di transpose
-[[9 4 1]
- [5 8 1]
- [1 9 8]]
+[[4 0 7]
+ [2 1 7]
+ [0 5 7]]
 </pre></div>
 </div>
 </div>
@@ -552,18 +599,18 @@ Shape digunakan untuk mendapatkan tuple yang menyatakan dimensi dari array/matri
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matrix A:
-[[4 8]
- [0 1]
- [1 7]]
+[[5 3]
+ [8 6]
+ [1 1]]
 
 Matrix B:
-[[5 1 6]
- [7 9 4]]
+[[1 0 0]
+ [1 0 4]]
 
 Hasil akhir perkalian matriks:
-[[76 76 56]
- [ 7  9  4]
- [54 64 34]]
+[[ 8  0 12]
+ [14  0 24]
+ [ 2  0  4]]
 </pre></div>
 </div>
 </div>
@@ -607,7 +654,7 @@ Hasil akhir perkalian matriks:
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Materi &amp; Tugas Pertemuan 2</p>
+        <p class="prev-next-title">Eliminasi Gaus</p>
       </div>
     </a>
 </div>

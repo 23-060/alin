@@ -1,8 +1,8 @@
 # Selamat Datang Di Jupyter-book Saya
 
-Halo, Selamat Datang Di Jupyter-book Saya, Sebelumnya Perkenalkan Saya Muhammad Rafi Lazuardi Dengan NIM 23-060, [23-060](https://github.com/23-060) adalah akun GitHub saya
+Halo, Selamat Datang Di Jupyter-book Saya, Sebelumnya Perkenalkan Saya Muhammad Rafi Lazuardi dan, [23-060](https://github.com/23-060) adalah akun GitHub saya
 
-## Membuat Video Tutorial Membuat Web Statis Menggunakan Jupyter-book
+## Membuat Web Statis Menggunakan Jupyter-book
 
 1. Membuat Repositories
 2. Beri Readme pada Repositories

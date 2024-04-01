@@ -57,6 +57,8 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Tugas 3';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -439,53 +441,69 @@ Misal kita memiliki Matriks A, Jika ada sebuah matriks B sedemikian rupa, sehing
 <p>Metode Gauss-Jordan merupakan salah satu varian dari eliminasi Gaussian yang dilakukan dengan cara operasi reduksi baris untuk mencari invers suatu matriks.</p>
 <p>Misal kita mau mencari invers dari sebuah matriks 3x3
 A =
+$<span class="math notranslate nohighlight">\(
 \begin{bmatrix}
-1 &amp; 2 &amp; 3\
-0 &amp; 1 &amp; 4\
+1 &amp; 2 &amp; 3\\ 
+0 &amp; 1 &amp; 4\\ 
 5 &amp; 6 &amp; 0
-\end{bmatrix}</p>
-<p>I =
+\end{bmatrix}
+\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(
+I = 
 \begin{bmatrix}
-1 &amp; 0 &amp; 0\
-0 &amp; 1 &amp; 0\
-0 &amp; 0 &amp; 1\
-\end{bmatrix}</p>
-<p>Setelah itu kita menggunakan eliminasi gaus jordan</p>
-<p>\begin{bmatrix}
-1 &amp; 2 &amp; 3 | 1 &amp; 0 &amp; 0\
-0 &amp; 1 &amp; 4 | 0 &amp; 1 &amp; 0\
-5 &amp; 6 &amp; 0 | 0 &amp; 0 &amp; 1\
-\end{bmatrix}</p>
-<p>Sekarang kita kurangkan baris ketiga dengan 5x baris pertama</p>
-<p>\begin{bmatrix}
-1 &amp; 2 &amp; 3 | 1 &amp; 0 &amp; 0\
-0 &amp; 1 &amp; 4 | 0 &amp; 1 &amp; 0\
-0 &amp; -4 &amp; -15 | -5 &amp; 0 &amp; 1\
-\end{bmatrix}</p>
-<p>Dari matriks diatas, kita tambahkan baris ke 3 dengan 4kali baris ke dua</p>
-<p>\begin{bmatrix}
-1 &amp; 2 &amp; 3 | 1 &amp; 0 &amp; 0\
-0 &amp; 1 &amp; 4 | 0 &amp; 1 &amp; 0\
-0 &amp; 0 &amp; 1 | -5 &amp; 4 &amp; 1\
-\end{bmatrix}</p>
-<p>selanjutnya kita kurangkan baris kedua dengan 4x baris ketiga, dan kita kurangkan juga baris pertama dengan 3x baris ketiga
+1 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 0\\
+0 &amp; 0 &amp; 1\\
+\end{bmatrix}
+\)</span><span class="math notranslate nohighlight">\(
+Setelah itu kita menggunakan eliminasi gaus jordan
+\)</span><span class="math notranslate nohighlight">\(
 \begin{bmatrix}
-1 &amp; 2 &amp; 0 | 16 &amp; -12 &amp; -3\
-0 &amp; 1 &amp; 0 | 20 &amp; -15 &amp; -4\
-0 &amp; 0 &amp; 1 | -5 &amp; 4 &amp; 1\
-\end{bmatrix}</p>
-<p>langkah terakhir kita kurangkan baris pertama dengan 2x baris kedua
+1 &amp; 2 &amp; 3 | 1 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 4 | 0 &amp; 1 &amp; 0\\
+5 &amp; 6 &amp; 0 | 0 &amp; 0 &amp; 1\\
+\end{bmatrix}
+\)</span><span class="math notranslate nohighlight">\( 
+Sekarang kita kurangkan baris ketiga dengan 5x baris pertama
+\)</span><span class="math notranslate nohighlight">\(
 \begin{bmatrix}
-1 &amp; 0 &amp; 0 | -24 &amp; 18 &amp; 5\
-0 &amp; 1 &amp; 0 | 20 &amp; -15 &amp; -4\
-0 &amp; 0 &amp; 1 | -5 &amp; 4 &amp; 1\
-\end{bmatrix}</p>
-<p>Maka invers dari matriks A adalah :
+1 &amp; 2 &amp; 3 | 1 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 4 | 0 &amp; 1 &amp; 0\\
+0 &amp; -4 &amp; -15 | -5 &amp; 0 &amp; 1\\
+\end{bmatrix}
+\)</span><span class="math notranslate nohighlight">\(
+Dari matriks diatas, kita tambahkan baris ke 3 dengan 4kali baris ke dua 
+\)</span><span class="math notranslate nohighlight">\(
 \begin{bmatrix}
--24 &amp; 18 &amp; 5\
-20 &amp; -15 &amp; -4\
--5 &amp; 4 &amp; 1\
-\end{bmatrix}</p>
+1 &amp; 2 &amp; 3 | 1 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 4 | 0 &amp; 1 &amp; 0\\
+0 &amp; 0 &amp; 1 | -5 &amp; 4 &amp; 1\\
+\end{bmatrix}
+\)</span><span class="math notranslate nohighlight">\(
+selanjutnya kita kurangkan baris kedua dengan 4x baris ketiga, dan kita kurangkan juga baris pertama dengan 3x baris ketiga
+\)</span><span class="math notranslate nohighlight">\(
+\begin{bmatrix}
+1 &amp; 2 &amp; 0 | 16 &amp; -12 &amp; -3\\
+0 &amp; 1 &amp; 0 | 20 &amp; -15 &amp; -4\\
+0 &amp; 0 &amp; 1 | -5 &amp; 4 &amp; 1\\
+\end{bmatrix}
+\)</span><span class="math notranslate nohighlight">\(
+langkah terakhir kita kurangkan baris pertama dengan 2x baris kedua
+\)</span><span class="math notranslate nohighlight">\(
+\begin{bmatrix}
+1 &amp; 0 &amp; 0 | -24 &amp; 18 &amp; 5\\
+0 &amp; 1 &amp; 0 | 20 &amp; -15 &amp; -4\\
+0 &amp; 0 &amp; 1 | -5 &amp; 4 &amp; 1\\
+\end{bmatrix}
+\)</span><span class="math notranslate nohighlight">\(
+Maka invers dari matriks A adalah : 
+\)</span><span class="math notranslate nohighlight">\(
+\begin{bmatrix}
+-24 &amp; 18 &amp; 5\\
+20 &amp; -15 &amp; -4\\
+-5 &amp; 4 &amp; 1\\
+\end{bmatrix}
+\)</span>$</p>
 </section>
 <section id="program-untuk-mencari-matrix-invers-menggunakan-eliminasi-gauss">
 <h2>Program untuk Mencari matrix invers menggunakan eliminasi gauss<a class="headerlink" href="#program-untuk-mencari-matrix-invers-menggunakan-eliminasi-gauss" title="Link to this heading">#</a></h2>

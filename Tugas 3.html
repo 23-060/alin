@@ -418,7 +418,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kita-kurangkan-juga-baris-pertama-dengan-3x-baris-ketiga">kita kurangkan juga baris pertama dengan 3x baris ketiga</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-terakhir-kita-kurangkan-baris-pertama-dengan-2x-baris-kedua">langkah terakhir kita kurangkan baris pertama dengan 2x baris kedua</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penyelesaian-sistem-persamaan-linear-menggunakan-matriks-invers">Penyelesaian sistem persamaan linear menggunakan matriks invers</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jawaban">Jawaban :</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-sistem-persamaan-linear">Matriks Sistem Persamaan linear</a></li>
 </ul>
 </li>
 </ul>
@@ -798,84 +798,58 @@ Hasil :
 </section>
 <section id="penyelesaian-sistem-persamaan-linear-menggunakan-matriks-invers">
 <h2>Penyelesaian sistem persamaan linear menggunakan matriks invers<a class="headerlink" href="#penyelesaian-sistem-persamaan-linear-menggunakan-matriks-invers" title="Link to this heading">#</a></h2>
-<p>Buatkan Penyelesaian sistem persamaan dari
+<p>Buatkan Penyelesaian sistem persamaan dari :</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}
+    2a + 3b + c + d = 12\\    a + b + 5c — d = 15\\    3a + 2b + 2c + 4d = 9\\    4a — b + 3c + 2d = 5
+\end{aligned}\end{align} \]</div>
+<section id="matriks-sistem-persamaan-linear">
+<h3>Matriks Sistem Persamaan linear<a class="headerlink" href="#matriks-sistem-persamaan-linear" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{bmatrix}
-4 &amp; 8 &amp; 5 &amp; 4\
-4 &amp; 5 &amp; 4 &amp; 5\
-5 &amp; 4 &amp; 1 &amp; 6\
-3 &amp; 5 &amp; 2 &amp; 4\
+2 &amp; 3 &amp; 1 &amp; 1\\
+1 &amp; 1 &amp; 5 &amp; 1\\
+3 &amp; 2 &amp; 2 &amp; 4\\
+4 &amp; 1 &amp; 3 &amp; 2
 \end{bmatrix}
-menggunakan mantriks invers</p>
-<section id="jawaban">
-<h3>Jawaban :<a class="headerlink" href="#jawaban" title="Link to this heading">#</a></h3>
+\begin{bmatrix}
+12\\
+15\\
+9\\
+5
+\end{bmatrix}
+\end{split}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([(</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span>
-              <span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span>
-              <span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">),</span>
-              <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">)])</span>
-<span class="n">I</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span>
-              <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span>
-              <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span>
-              <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)])</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriks A : </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+ 
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+              <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+              <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+              <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> Matriks identitas:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">I</span><span class="p">)</span>
-    
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matriks A : 
-
-[[4 8 5 4]
- [4 5 4 5]
- [5 4 1 6]
- [3 5 2 4]]
-
- Matriks identitas:
-[[1 0 0 0]
- [0 1 0 0]
- [0 0 1 0]
- [0 0 0 1]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[2 3 1 1 1 0 0 0]
+ [1 1 5 1 0 1 0 0]
+ [3 2 2 4 0 0 1 0]
+ [4 1 3 2 0 0 0 1]]
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A_E</span> <span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span>
-              <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span>
-              <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span>
-              <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">A_E</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1 2 2 4 1 0 0 0]
- [2 6 4 0 0 1 0 0]
- [0 4 2 4 0 0 1 0]
- [2 4 4 3 0 0 0 1]]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A_1</span> <span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span>
-              <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span>
-              <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span>
-              <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">k</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">l</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">scale</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
 
-<span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">l</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">scale</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span>
-
-<span class="n">h</span> <span class="o">=</span> <span class="n">RowAdd</span><span class="p">(</span><span class="n">A_1</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">scale</span><span class="p">)</span>
+<span class="n">h</span> <span class="o">=</span> <span class="n">RowAdd</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">scale</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriks awal:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">A_1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Hasil :&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">h</span><span class="p">)</span>
 </pre></div>
@@ -883,16 +857,16 @@ menggunakan mantriks invers</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matriks awal:
-[[1 2 2 4 1 0 0 0]
- [2 6 4 0 0 1 0 0]
- [0 4 2 4 0 0 1 0]
- [2 4 4 3 0 0 0 1]]
+[[2 3 1 1 1 0 0 0]
+ [1 1 5 1 0 1 0 0]
+ [3 2 2 4 0 0 1 0]
+ [4 1 3 2 0 0 0 1]]
 
 Hasil :
-[[ 1.  2.  2.  4.  1.  0.  0.  0.]
- [ 0.  2.  0. -8. -2.  1.  0.  0.]
- [ 0.  4.  2.  4.  0.  0.  1.  0.]
- [ 2.  4.  4.  3.  0.  0.  0.  1.]]
+[[ 1.  2. -4.  0.  1. -1.  0.  0.]
+ [ 1.  1.  5.  1.  0.  1.  0.  0.]
+ [ 3.  2.  2.  4.  0.  0.  1.  0.]
+ [ 4.  1.  3.  2.  0.  0.  0.  1.]]
 </pre></div>
 </div>
 </div>
@@ -900,154 +874,208 @@ Hasil :
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">l</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">scale</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span>
-
-<span class="n">result2</span> <span class="o">=</span> <span class="n">RowAdd</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">scale</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriks awal:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Hasil :&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result2</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">IndexError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">12</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">l</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">scale</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span>
-<span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">result2</span> <span class="o">=</span> <span class="n">RowAdd</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">scale</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriks awal:&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-
-<span class="nn">Cell In[3], line 13,</span> in <span class="ni">RowAdd</span><span class="nt">(A, k, l, scale)</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float64&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-<span class="ne">---&gt; </span><span class="mi">13</span>     <span class="n">B</span><span class="p">[</span><span class="n">l</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">+=</span> <span class="n">B</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="n">scale</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="k">return</span> <span class="n">B</span>
-
-<span class="ne">IndexError</span>: index 3 is out of bounds for axis 0 with size 3
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">k</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">l</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">scale</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span>
-
-<span class="n">result3</span> <span class="o">=</span> <span class="n">RowAdd</span><span class="p">(</span><span class="n">result2</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">scale</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriks awal:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Hasil :&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result3</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matriks awal:
-[[  1.   2.   2.   4.   1.   0.   0.   0.]
- [  0.   2.   0.  -8.  -2.   1.   0.   0.]
- [  0.  -4.  -2.  -4.   0.   0.  -1.   0.]
- [ -2.  -4.  -4. -13.  -4.   0.   0.   1.]]
-
-Hasil :
-[[  1.   2.   2.   4.   1.   0.   0.   0.]
- [  0.   2.   0.  -8.  -2.   1.   0.   0.]
- [  0.   4.   2.   4.   0.   0.   1.   0.]
- [ -2.  -4.  -4. -13.  -4.   0.   0.   1.]]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">l</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">scale</span> <span class="o">=</span> <span class="mi">2</span>
-
-<span class="n">result4</span> <span class="o">=</span> <span class="n">RowAdd</span><span class="p">(</span><span class="n">result3</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">scale</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriks awal:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result3</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Matriks setelah RowScale:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result4</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matriks awal:
-[[  1.   2.   2.   4.   1.   0.   0.   0.]
- [  0.   2.   0.  -8.  -2.   1.   0.   0.]
- [  0.   4.   2.   4.   0.   0.   1.   0.]
- [ -2.  -4.  -4. -13.  -4.   0.   0.   1.]]
-
-Matriks setelah RowScale:
-[[ 1.  2.  2.  4.  1.  0.  0.  0.]
- [ 0.  2.  0. -8. -2.  1.  0.  0.]
- [ 0.  4.  2.  4.  0.  0.  1.  0.]
- [ 0.  0.  0. -5. -2.  0.  0.  1.]]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">k</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">l</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">scale</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">scale</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
 
-<span class="n">result5</span> <span class="o">=</span> <span class="n">RowScale</span><span class="p">(</span><span class="n">result4</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">scale</span><span class="p">)</span>
+<span class="n">h2</span> <span class="o">=</span> <span class="n">RowAdd</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">scale</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriks awal:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result4</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Matriks setelah RowScale:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">h</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Hasil :&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">h2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matriks awal:
-[[ 1.  2.  2.  4.  1.  0.  0.  0.]
- [ 0.  2.  0. -8. -2.  1.  0.  0.]
- [ 0.  4.  2.  4.  0.  0.  1.  0.]
- [ 0.  0.  0. -5. -2.  0.  0.  1.]]
+[[ 1.  2. -4.  0.  1. -1.  0.  0.]
+ [ 1.  1.  5.  1.  0.  1.  0.  0.]
+ [ 3.  2.  2.  4.  0.  0.  1.  0.]
+ [ 4.  1.  3.  2.  0.  0.  0.  1.]]
 
-Matriks setelah RowScale:
-[[ 1.   2.   2.   4.   1.   0.   0.   0. ]
- [ 0.   1.   0.  -4.  -1.   0.5  0.   0. ]
- [ 0.   4.   2.   4.   0.   0.   1.   0. ]
- [ 0.   0.   0.  -5.  -2.   0.   0.   1. ]]
+Hasil :
+[[ 1.  2. -4.  0.  1. -1.  0.  0.]
+ [ 0. -1.  9.  1. -1.  2.  0.  0.]
+ [ 3.  2.  2.  4.  0.  0.  1.  0.]
+ [ 4.  1.  3.  2.  0.  0.  0.  1.]]
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">k</span> <span class="o">=</span> <span class="mi">1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">l</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">scale</span> <span class="o">=</span> <span class="o">-</span><span class="mi">3</span>
+
+<span class="n">h3</span> <span class="o">=</span> <span class="n">RowAdd</span><span class="p">(</span><span class="n">h2</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">scale</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriks awal:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">h2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Hasil :&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">h3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matriks awal:
+[[ 1.  2. -4.  0.  1. -1.  0.  0.]
+ [ 0. -1.  9.  1. -1.  2.  0.  0.]
+ [ 3.  2.  2.  4.  0.  0.  1.  0.]
+ [ 4.  1.  3.  2.  0.  0.  0.  1.]]
+
+Hasil :
+[[ 1.  2. -4.  0.  1. -1.  0.  0.]
+ [ 0. -1.  9.  1. -1.  2.  0.  0.]
+ [ 0. -4. 14.  4. -3.  3.  1.  0.]
+ [ 4.  1.  3.  2.  0.  0.  0.  1.]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">l</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="n">scale</span> <span class="o">=</span> <span class="o">-</span><span class="mi">4</span>
 
-<span class="n">result6</span> <span class="o">=</span> <span class="n">RowAdd</span><span class="p">(</span><span class="n">result5</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">scale</span><span class="p">)</span>
+<span class="n">h4</span> <span class="o">=</span> <span class="n">RowAdd</span><span class="p">(</span><span class="n">h3</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">scale</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriks awal:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result5</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Matriks setelah RowScale:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result6</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">h3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Hasil :&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">h4</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matriks awal:
-[[ 1.   2.   2.   4.   1.   0.   0.   0. ]
- [ 0.   1.   0.  -4.  -1.   0.5  0.   0. ]
- [ 0.   4.   2.   4.   0.   0.   1.   0. ]
- [ 0.   0.   0.  -5.  -2.   0.   0.   1. ]]
+[[ 1.  2. -4.  0.  1. -1.  0.  0.]
+ [ 0. -1.  9.  1. -1.  2.  0.  0.]
+ [ 0. -4. 14.  4. -3.  3.  1.  0.]
+ [ 4.  1.  3.  2.  0.  0.  0.  1.]]
 
-Matriks setelah RowScale:
-[[ 1.   2.   2.   4.   1.   0.   0.   0. ]
- [ 0.   1.   0.  -4.  -1.   0.5  0.   0. ]
- [ 0.   0.   2.  20.   4.  -2.   1.   0. ]
- [ 0.   0.   0.  -5.  -2.   0.   0.   1. ]]
+Hasil :
+[[ 1.  2. -4.  0.  1. -1.  0.  0.]
+ [ 0. -1.  9.  1. -1.  2.  0.  0.]
+ [ 0. -4. 14.  4. -3.  3.  1.  0.]
+ [ 0. -7. 19.  2. -4.  4.  0.  1.]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">k</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">l</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">scale</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+
+<span class="n">h5</span> <span class="o">=</span> <span class="n">RowScale</span><span class="p">(</span><span class="n">h4</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">scale</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriks awal:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">h4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Hasil :&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">h5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matriks awal:
+[[ 1.  2. -4.  0.  1. -1.  0.  0.]
+ [ 0. -1.  9.  1. -1.  2.  0.  0.]
+ [ 0. -4. 14.  4. -3.  3.  1.  0.]
+ [ 0. -7. 19.  2. -4.  4.  0.  1.]]
+
+Hasil :
+[[ 1.  2. -4.  0.  1. -1.  0.  0.]
+ [-0.  1. -9. -1.  1. -2. -0. -0.]
+ [ 0. -4. 14.  4. -3.  3.  1.  0.]
+ [ 0. -7. 19.  2. -4.  4.  0.  1.]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">k</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">l</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">scale</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span>
+
+<span class="n">h6</span> <span class="o">=</span> <span class="n">RowAdd</span><span class="p">(</span><span class="n">h5</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">scale</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriks awal:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">h5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Hasil :&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">h6</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matriks awal:
+[[ 1.  2. -4.  0.  1. -1.  0.  0.]
+ [-0.  1. -9. -1.  1. -2. -0. -0.]
+ [ 0. -4. 14.  4. -3.  3.  1.  0.]
+ [ 0. -7. 19.  2. -4.  4.  0.  1.]]
+
+Hasil :
+[[ 1.  0. 14.  2. -1.  3.  0.  0.]
+ [-0.  1. -9. -1.  1. -2. -0. -0.]
+ [ 0. -4. 14.  4. -3.  3.  1.  0.]
+ [ 0. -7. 19.  2. -4.  4.  0.  1.]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">k</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">l</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">scale</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="n">h7</span> <span class="o">=</span> <span class="n">RowAdd</span><span class="p">(</span><span class="n">h6</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">scale</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriks awal:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">h6</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Hasil :&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">h7</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matriks awal:
+[[ 1.  0. 14.  2. -1.  3.  0.  0.]
+ [-0.  1. -9. -1.  1. -2. -0. -0.]
+ [ 0. -4. 14.  4. -3.  3.  1.  0.]
+ [ 0. -7. 19.  2. -4.  4.  0.  1.]]
+
+Hasil :
+[[  1.   0.  14.   2.  -1.   3.   0.   0.]
+ [ -0.   1.  -9.  -1.   1.  -2.  -0.  -0.]
+ [  0.   0. -22.   0.   1.  -5.   1.   0.]
+ [  0.  -7.  19.   2.  -4.   4.   0.   1.]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">k</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">l</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">scale</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="n">h8</span> <span class="o">=</span> <span class="n">RowAdd</span><span class="p">(</span><span class="n">h7</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">scale</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriks awal:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">h7</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Hasil :&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">h8</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matriks awal:
+[[  1.   0.  14.   2.  -1.   3.   0.   0.]
+ [ -0.   1.  -9.  -1.   1.  -2.  -0.  -0.]
+ [  0.   0. -22.   0.   1.  -5.   1.   0.]
+ [  0.  -7.  19.   2.  -4.   4.   0.   1.]]
+
+Hasil :
+[[  1.   0.  14.   2.  -1.   3.   0.   0.]
+ [ -0.   1.  -9.  -1.   1.  -2.  -0.  -0.]
+ [  0.   0. -22.   0.   1.  -5.   1.   0.]
+ [  0.   0. -44.  -5.   3. -10.   0.   1.]]
 </pre></div>
 </div>
 </div>
@@ -1056,28 +1084,146 @@ Matriks setelah RowScale:
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">k</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="n">l</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">scale</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">scale</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">22</span>
 
-<span class="n">result7</span> <span class="o">=</span> <span class="n">RowScale</span><span class="p">(</span><span class="n">result6</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">scale</span><span class="p">)</span>
+<span class="n">h9</span> <span class="o">=</span> <span class="n">RowScale</span><span class="p">(</span><span class="n">h8</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">scale</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriks awal:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result6</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Matriks setelah RowScale:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result7</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">h8</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Hasil :&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">h9</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matriks awal:
-[[ 1.   2.   2.   4.   1.   0.   0.   0. ]
- [ 0.   1.   0.  -4.  -1.   0.5  0.   0. ]
- [ 0.   0.   2.  20.   4.  -2.   1.   0. ]
- [ 0.   0.   0.  -5.  -2.   0.   0.   1. ]]
+[[  1.   0.  14.   2.  -1.   3.   0.   0.]
+ [ -0.   1.  -9.  -1.   1.  -2.  -0.  -0.]
+ [  0.   0. -22.   0.   1.  -5.   1.   0.]
+ [  0.   0. -44.  -5.   3. -10.   0.   1.]]
 
-Matriks setelah RowScale:
-[[ 1.   2.   2.   4.   1.   0.   0.   0. ]
- [ 0.   1.   0.  -4.  -1.   0.5  0.   0. ]
- [ 0.   0.   1.  10.   2.  -1.   0.5  0. ]
- [ 0.   0.   0.  -5.  -2.   0.   0.   1. ]]
+Hasil :
+[[  1.           0.          14.           2.          -1.
+    3.           0.           0.        ]
+ [ -0.           1.          -9.          -1.           1.
+   -2.          -0.          -0.        ]
+ [ -0.          -0.           1.          -0.          -0.04545455
+    0.22727273  -0.04545455  -0.        ]
+ [  0.           0.         -44.          -5.           3.
+  -10.           0.           1.        ]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">k</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">l</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">scale</span> <span class="o">=</span> <span class="o">-</span><span class="mi">14</span>
+
+<span class="n">h10</span> <span class="o">=</span> <span class="n">RowAdd</span><span class="p">(</span><span class="n">h9</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span><span class="n">scale</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriks awal:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">h9</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Hasil :&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">h10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matriks awal:
+[[  1.           0.          14.           2.          -1.
+    3.           0.           0.        ]
+ [ -0.           1.          -9.          -1.           1.
+   -2.          -0.          -0.        ]
+ [ -0.          -0.           1.          -0.          -0.04545455
+    0.22727273  -0.04545455  -0.        ]
+ [  0.           0.         -44.          -5.           3.
+  -10.           0.           1.        ]]
+
+Hasil :
+[[  1.           0.           0.           2.          -0.36363636
+   -0.18181818   0.63636364   0.        ]
+ [ -0.           1.          -9.          -1.           1.
+   -2.          -0.          -0.        ]
+ [ -0.          -0.           1.          -0.          -0.04545455
+    0.22727273  -0.04545455  -0.        ]
+ [  0.           0.         -44.          -5.           3.
+  -10.           0.           1.        ]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">k</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">l</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">scale</span> <span class="o">=</span> <span class="mi">9</span>
+
+<span class="n">h11</span> <span class="o">=</span> <span class="n">RowAdd</span><span class="p">(</span><span class="n">h10</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span><span class="n">scale</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriks awal:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">h10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Hasil :&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">h11</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matriks awal:
+[[  1.           0.           0.           2.          -0.36363636
+   -0.18181818   0.63636364   0.        ]
+ [ -0.           1.          -9.          -1.           1.
+   -2.          -0.          -0.        ]
+ [ -0.          -0.           1.          -0.          -0.04545455
+    0.22727273  -0.04545455  -0.        ]
+ [  0.           0.         -44.          -5.           3.
+  -10.           0.           1.        ]]
+
+Hasil :
+[[  1.           0.           0.           2.          -0.36363636
+   -0.18181818   0.63636364   0.        ]
+ [ -0.           1.           0.          -1.           0.59090909
+    0.04545455  -0.40909091  -0.        ]
+ [ -0.          -0.           1.          -0.          -0.04545455
+    0.22727273  -0.04545455  -0.        ]
+ [  0.           0.         -44.          -5.           3.
+  -10.           0.           1.        ]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">k</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">l</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">scale</span> <span class="o">=</span> <span class="mi">44</span>
+
+<span class="n">h12</span> <span class="o">=</span> <span class="n">RowAdd</span><span class="p">(</span><span class="n">h11</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span><span class="n">scale</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriks awal:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">h11</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Hasil :&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">h12</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matriks awal:
+[[  1.           0.           0.           2.          -0.36363636
+   -0.18181818   0.63636364   0.        ]
+ [ -0.           1.           0.          -1.           0.59090909
+    0.04545455  -0.40909091  -0.        ]
+ [ -0.          -0.           1.          -0.          -0.04545455
+    0.22727273  -0.04545455  -0.        ]
+ [  0.           0.         -44.          -5.           3.
+  -10.           0.           1.        ]]
+
+Hasil :
+[[ 1.          0.          0.          2.         -0.36363636 -0.18181818
+   0.63636364  0.        ]
+ [-0.          1.          0.         -1.          0.59090909  0.04545455
+  -0.40909091 -0.        ]
+ [-0.         -0.          1.         -0.         -0.04545455  0.22727273
+  -0.04545455 -0.        ]
+ [ 0.          0.          0.         -5.          1.          0.
+  -2.          1.        ]]
 </pre></div>
 </div>
 </div>
@@ -1088,26 +1234,34 @@ Matriks setelah RowScale:
 <span class="n">l</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="n">scale</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">5</span>
 
-<span class="n">result8</span> <span class="o">=</span> <span class="n">RowScale</span><span class="p">(</span><span class="n">result7</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">scale</span><span class="p">)</span>
+<span class="n">h13</span> <span class="o">=</span> <span class="n">RowScale</span><span class="p">(</span><span class="n">h12</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span><span class="n">scale</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriks awal:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result7</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Matriks setelah RowScale:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result8</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">h12</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Hasil :&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">h13</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matriks awal:
-[[ 1.   2.   2.   4.   1.   0.   0.   0. ]
- [ 0.   1.   0.  -4.  -1.   0.5  0.   0. ]
- [ 0.   0.   1.  10.   2.  -1.   0.5  0. ]
- [ 0.   0.   0.  -5.  -2.   0.   0.   1. ]]
+[[ 1.          0.          0.          2.         -0.36363636 -0.18181818
+   0.63636364  0.        ]
+ [-0.          1.          0.         -1.          0.59090909  0.04545455
+  -0.40909091 -0.        ]
+ [-0.         -0.          1.         -0.         -0.04545455  0.22727273
+  -0.04545455 -0.        ]
+ [ 0.          0.          0.         -5.          1.          0.
+  -2.          1.        ]]
 
-Matriks setelah RowScale:
-[[ 1.   2.   2.   4.   1.   0.   0.   0. ]
- [ 0.   1.   0.  -4.  -1.   0.5  0.   0. ]
- [ 0.   0.   1.  10.   2.  -1.   0.5  0. ]
- [-0.  -0.  -0.   1.   0.4 -0.  -0.  -0.2]]
+Hasil :
+[[ 1.          0.          0.          2.         -0.36363636 -0.18181818
+   0.63636364  0.        ]
+ [-0.          1.          0.         -1.          0.59090909  0.04545455
+  -0.40909091 -0.        ]
+ [-0.         -0.          1.         -0.         -0.04545455  0.22727273
+  -0.04545455 -0.        ]
+ [-0.         -0.         -0.          1.         -0.2        -0.
+   0.4        -0.2       ]]
 </pre></div>
 </div>
 </div>
@@ -1115,29 +1269,37 @@ Matriks setelah RowScale:
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">k</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">l</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">scale</span> <span class="o">=</span> <span class="o">-</span><span class="mi">10</span>
+<span class="n">l</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">scale</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span>
 
-<span class="n">result9</span> <span class="o">=</span> <span class="n">RowAdd</span><span class="p">(</span><span class="n">result8</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">scale</span><span class="p">)</span>
+<span class="n">h14</span> <span class="o">=</span> <span class="n">RowAdd</span><span class="p">(</span><span class="n">h13</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">scale</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriks awal:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result8</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Matriks setelah RowScale:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result9</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">h13</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Hasil :&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">h14</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matriks awal:
-[[ 1.   2.   2.   4.   1.   0.   0.   0. ]
- [ 0.   1.   0.  -4.  -1.   0.5  0.   0. ]
- [ 0.   0.   1.  10.   2.  -1.   0.5  0. ]
- [-0.  -0.  -0.   1.   0.4 -0.  -0.  -0.2]]
+[[ 1.          0.          0.          2.         -0.36363636 -0.18181818
+   0.63636364  0.        ]
+ [-0.          1.          0.         -1.          0.59090909  0.04545455
+  -0.40909091 -0.        ]
+ [-0.         -0.          1.         -0.         -0.04545455  0.22727273
+  -0.04545455 -0.        ]
+ [-0.         -0.         -0.          1.         -0.2        -0.
+   0.4        -0.2       ]]
 
-Matriks setelah RowScale:
-[[ 1.   2.   2.   4.   1.   0.   0.   0. ]
- [ 0.   1.   0.  -4.  -1.   0.5  0.   0. ]
- [ 0.   0.   1.   0.  -2.  -1.   0.5  2. ]
- [-0.  -0.  -0.   1.   0.4 -0.  -0.  -0.2]]
+Hasil :
+[[ 1.          0.          0.          0.          0.03636364 -0.18181818
+  -0.16363636  0.4       ]
+ [-0.          1.          0.         -1.          0.59090909  0.04545455
+  -0.40909091 -0.        ]
+ [-0.         -0.          1.         -0.         -0.04545455  0.22727273
+  -0.04545455 -0.        ]
+ [-0.         -0.         -0.          1.         -0.2        -0.
+   0.4        -0.2       ]]
 </pre></div>
 </div>
 </div>
@@ -1146,118 +1308,123 @@ Matriks setelah RowScale:
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">k</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="n">l</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">scale</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">scale</span> <span class="o">=</span> <span class="mi">1</span>
 
-<span class="n">result10</span> <span class="o">=</span> <span class="n">RowAdd</span><span class="p">(</span><span class="n">result9</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">scale</span><span class="p">)</span>
+<span class="n">h15</span> <span class="o">=</span> <span class="n">RowAdd</span><span class="p">(</span><span class="n">h14</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">scale</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriks awal:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result9</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Matriks setelah RowScale:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">h14</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Hasil :&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">h15</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matriks awal:
-[[ 1.   2.   2.   4.   1.   0.   0.   0. ]
- [ 0.   1.   0.  -4.  -1.   0.5  0.   0. ]
- [ 0.   0.   1.   0.  -2.  -1.   0.5  2. ]
- [-0.  -0.  -0.   1.   0.4 -0.  -0.  -0.2]]
+[[ 1.          0.          0.          0.          0.03636364 -0.18181818
+  -0.16363636  0.4       ]
+ [-0.          1.          0.         -1.          0.59090909  0.04545455
+  -0.40909091 -0.        ]
+ [-0.         -0.          1.         -0.         -0.04545455  0.22727273
+  -0.04545455 -0.        ]
+ [-0.         -0.         -0.          1.         -0.2        -0.
+   0.4        -0.2       ]]
 
-Matriks setelah RowScale:
-[[ 1.   2.   2.   4.   1.   0.   0.   0. ]
- [ 0.   1.   0.   0.   0.6  0.5  0.  -0.8]
- [ 0.   0.   1.   0.  -2.  -1.   0.5  2. ]
- [-0.  -0.  -0.   1.   0.4 -0.  -0.  -0.2]]
+Hasil :
+[[ 1.          0.          0.          0.          0.03636364 -0.18181818
+  -0.16363636  0.4       ]
+ [-0.          1.          0.          0.          0.39090909  0.04545455
+  -0.00909091 -0.2       ]
+ [-0.         -0.          1.         -0.         -0.04545455  0.22727273
+  -0.04545455 -0.        ]
+ [-0.         -0.         -0.          1.         -0.2        -0.
+   0.4        -0.2       ]]
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">k</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">l</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">scale</span> <span class="o">=</span> <span class="o">-</span><span class="mi">4</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Inv</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">0.03636364</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.18181818</span><span class="p">,</span>  <span class="o">-</span><span class="mf">0.16363636</span><span class="p">,</span>  <span class="mf">0.4</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">0.39090909</span><span class="p">,</span>  <span class="mf">0.04545455</span><span class="p">,</span>  <span class="o">-</span><span class="mf">0.00909091</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.2</span>       <span class="p">],</span>
+            <span class="p">[</span><span class="o">-</span><span class="mf">0.04545455</span><span class="p">,</span>  <span class="mf">0.22727273</span><span class="p">,</span>  <span class="o">-</span><span class="mf">0.04545455</span><span class="p">,</span> <span class="o">-</span><span class="mi">0</span>        <span class="p">],</span>
+            <span class="p">[</span> <span class="o">-</span><span class="mf">0.2</span><span class="p">,</span>        <span class="o">-</span><span class="mi">0</span><span class="p">,</span>   <span class="mf">0.4</span><span class="p">,</span>        <span class="o">-</span><span class="mf">0.2</span><span class="p">,</span>       <span class="p">]])</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">12</span><span class="p">],</span>
+              <span class="p">[</span><span class="mi">15</span><span class="p">],</span>
+               <span class="p">[</span><span class="mi">9</span><span class="p">],</span>
+               <span class="p">[</span><span class="mi">5</span><span class="p">]])</span>
 
-<span class="n">result11</span> <span class="o">=</span> <span class="n">RowAdd</span><span class="p">(</span><span class="n">result10</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">scale</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriks awal:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result10</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Matriks setelah RowScale:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result11</span><span class="p">)</span>
+<span class="n">hasil</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">Inv</span><span class="p">,</span><span class="n">B</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">hasil</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matriks awal:
-[[ 1.   2.   2.   4.   1.   0.   0.   0. ]
- [ 0.   1.   0.   0.   0.6  0.5  0.  -0.8]
- [ 0.   0.   1.   0.  -2.  -1.   0.5  2. ]
- [-0.  -0.  -0.   1.   0.4 -0.  -0.  -0.2]]
-
-Matriks setelah RowScale:
-[[ 1.   2.   2.   0.  -0.6  0.   0.   0.8]
- [ 0.   1.   0.   0.   0.6  0.5  0.  -0.8]
- [ 0.   0.   1.   0.  -2.  -1.   0.5  2. ]
- [-0.  -0.  -0.   1.   0.4 -0.  -0.  -0.2]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[-1.76363626]
+ [ 4.29090914]
+ [ 2.4545454 ]
+ [ 0.2       ]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>import numpy as np</p>
+<p>A = np.array([[2,3,1,1,1,0,0,0],
+[1,1,5,1,0,1,0,0],
+[3,2,2,4,0,0,1,0],
+[4,1,3,2,0,0,0,1]])
+print(A)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A1</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="mi">0</span><span class="p">,:</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">per1</span> <span class="o">=</span> <span class="n">A1</span><span class="nd">@hasil</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">per1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[12.0000003]
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">k</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">l</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">scale</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span>
-
-<span class="n">result12</span> <span class="o">=</span> <span class="n">RowAdd</span><span class="p">(</span><span class="n">result11</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">scale</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriks awal:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result11</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Matriks setelah RowScale:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result12</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A2</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">,:</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">per2</span> <span class="o">=</span> <span class="n">A2</span><span class="nd">@hasil</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">per2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matriks awal:
-[[ 1.   2.   2.   0.  -0.6  0.   0.   0.8]
- [ 0.   1.   0.   0.   0.6  0.5  0.  -0.8]
- [ 0.   0.   1.   0.  -2.  -1.   0.5  2. ]
- [-0.  -0.  -0.   1.   0.4 -0.  -0.  -0.2]]
-
-Matriks setelah RowScale:
-[[ 1.   2.   0.   0.   3.4  2.  -1.  -3.2]
- [ 0.   1.   0.   0.   0.6  0.5  0.  -0.8]
- [ 0.   0.   1.   0.  -2.  -1.   0.5  2. ]
- [-0.  -0.  -0.   1.   0.4 -0.  -0.  -0.2]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[14.99999988]
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">k</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">l</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">scale</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span>
-
-<span class="n">result13</span> <span class="o">=</span> <span class="n">RowAdd</span><span class="p">(</span><span class="n">result12</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">scale</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriks awal:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result12</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Matriks setelah RowScale:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result13</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A3</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="mi">2</span><span class="p">,:</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">per3</span> <span class="o">=</span> <span class="n">A3</span><span class="nd">@hasil</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">per3</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matriks awal:
-[[ 1.   2.   0.   0.   3.4  2.  -1.  -3.2]
- [ 0.   1.   0.   0.   0.6  0.5  0.  -0.8]
- [ 0.   0.   1.   0.  -2.  -1.   0.5  2. ]
- [-0.  -0.  -0.   1.   0.4 -0.  -0.  -0.2]]
-
-Matriks setelah RowScale:
-[[ 1.   0.   0.   0.   2.2  1.  -1.  -1.6]
- [ 0.   1.   0.   0.   0.6  0.5  0.  -0.8]
- [ 0.   0.   1.   0.  -2.  -1.   0.5  2. ]
- [-0.  -0.  -0.   1.   0.4 -0.  -0.  -0.2]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[9.0000003]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A4</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="mi">3</span><span class="p">,:</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">per4</span> <span class="o">=</span> <span class="n">A4</span><span class="nd">@hasil</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">per4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[5.0000003]
 </pre></div>
 </div>
 </div>
@@ -1331,7 +1498,7 @@ Matriks setelah RowScale:
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kita-kurangkan-juga-baris-pertama-dengan-3x-baris-ketiga">kita kurangkan juga baris pertama dengan 3x baris ketiga</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-terakhir-kita-kurangkan-baris-pertama-dengan-2x-baris-kedua">langkah terakhir kita kurangkan baris pertama dengan 2x baris kedua</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penyelesaian-sistem-persamaan-linear-menggunakan-matriks-invers">Penyelesaian sistem persamaan linear menggunakan matriks invers</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jawaban">Jawaban :</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-sistem-persamaan-linear">Matriks Sistem Persamaan linear</a></li>
 </ul>
 </li>
 </ul>

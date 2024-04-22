@@ -440,9 +440,9 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[4 1 0]
- [5 7 2]
- [7 4 7]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1 5 7]
+ [5 3 1]
+ [8 9 3]]
 </pre></div>
 </div>
 </div>
@@ -503,9 +503,9 @@ size=(3,3) adalah ukuran kolom baris sebuah matrix</p></li>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[9 2 7]
- [6 9 4]
- [9 8 2]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[7 7 5]
+ [6 4 6]
+ [4 9 2]]
 </pre></div>
 </div>
 </div>
@@ -534,13 +534,13 @@ Syntax “transpose()” digunakan untuk menghasilkan transpos dari matriks A. T
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matrix A
-[[5 6 7]
- [1 7 4]
- [3 3 1]]
+[[7 2 0]
+ [3 3 5]
+ [4 3 8]]
 Matrix A yang sudah di transpose
-[[5 1 3]
- [6 7 3]
- [7 4 1]]
+[[7 3 4]
+ [2 3 3]
+ [0 5 8]]
 </pre></div>
 </div>
 </div>
@@ -575,43 +575,89 @@ Shape digunakan untuk mendapatkan tuple yang menyatakan dimensi dari array/matri
 <h2>Mengalikan Matrix Menggunakan Program Python<a class="headerlink" href="#mengalikan-matrix-menggunakan-program-python" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">listA</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+    <span class="p">]</span>
 
-<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
-<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="n">listB</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span>
+    <span class="p">]</span>
+  
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriks A&quot;</span><span class="p">,</span><span class="n">listA</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;MAtriks B&quot;</span><span class="p">,</span><span class="n">listB</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;panjang baris dan kolom&quot;</span><span class="p">)</span>
 
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriks A&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">listA</span><span class="p">),</span><span class="nb">len</span><span class="p">(</span><span class="n">listA</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 
-<span class="n">Kumpulan_matrix</span> <span class="o">=</span> <span class="p">[</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriks B&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">listB</span><span class="p">),</span><span class="nb">len</span><span class="p">(</span><span class="n">listB</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 
-<span class="n">hasil</span> <span class="o">=</span> <span class="n">Kumpulan_matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="c1"># n adalah panjang baris matrix listA</span>
+<span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">listA</span><span class="p">)</span>
 
-<span class="k">for</span> <span class="n">matrix</span> <span class="ow">in</span> <span class="n">Kumpulan_matrix</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
-    <span class="n">hasil</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">hasil</span><span class="p">,</span> <span class="n">matrix</span><span class="p">)</span>
+<span class="c1"># adalah panjang kolom matrix listA dan panjang baris matrix listB</span>
+<span class="n">m</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">listA</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matrix A:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Matrix B:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Hasil akhir perkalian matriks:&quot;</span><span class="p">)</span>
+<span class="c1"># p adalah panjang baris matrix listB</span>
+<span class="n">p</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">listB</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="n">hasil</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="c1"># perulangan terjadi sebanyak panjang baris listA</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
+  <span class="n">hasil1</span> <span class="o">=</span> <span class="p">[]</span>
+  <span class="c1"># perulangan terjadi sebanyak panjang baris listB</span>
+  <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">p</span><span class="p">):</span>
+    <span class="n">jumlah</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">m</span><span class="p">):</span>
+      <span class="n">jumlah</span> <span class="o">+=</span> <span class="n">listA</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">k</span><span class="p">]</span> <span class="o">*</span> <span class="n">listB</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
+    <span class="n">hasil1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">jumlah</span><span class="p">)</span>
+  <span class="n">hasil</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">hasil1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hasil dari perkalian matrix&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">hasil</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matriks A [[5, 3], [5, 2], [3, 1]] 
+
+MAtriks B [[5, 2, 3], [3, 6, 5]] 
+
+panjang baris dan kolom
+Matriks A
+3 2 
+
+Matriks B
+2 3 
+
+hasil dari perkalian matrix
+[[34, 28, 30], [31, 22, 25], [18, 12, 14]] 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([(</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span>
+              <span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+              <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">)])</span>
+
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span>
+              <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">)])</span>
+
+<span class="n">hasil</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">hasil</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matrix A:
-[[5 8]
- [3 9]
- [1 8]]
-
-Matrix B:
-[[4 5 5]
- [4 0 0]]
-
-Hasil akhir perkalian matriks:
-[[52 25 25]
- [48 15 15]
- [36  5  5]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[34 28 30]
+ [31 22 25]
+ [18 12 14]]
 </pre></div>
 </div>
 </div>

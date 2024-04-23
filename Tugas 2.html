@@ -150,8 +150,8 @@
       
     
     
-    <img src="_static/AljabarLinier.png" class="logo__image only-light" alt="My sample book - Home"/>
-    <script>document.write(`<img src="_static/AljabarLinier.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+    <img src="_static/KAL.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/KAL.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
   
   
 </a></div>
@@ -414,7 +414,10 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cara-mengetahui-shape-matrix-menggunakan-program-python">Cara Mengetahui Shape Matrix Menggunakan Program Python</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengalikan-matrix-menggunakan-program-python">Mengalikan Matrix Menggunakan Program Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perkalian-matrix">Perkalian Matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cara-kerja-perkalian-matrix">Cara Kerja Perkalian Matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cara-mengalikan-matrix-menggunakan-program-python-secara-manual">Cara Mengalikan Matrix Menggunakan Program Python Secara Manual</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cara-mengalikan-matrix-menggunakan-program-python-dengan-library-numpy">Cara Mengalikan Matrix Menggunakan Program Python Dengan Library Numpy</a></li>
 </ul>
             </nav>
         </div>
@@ -440,9 +443,9 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1 5 7]
- [5 3 1]
- [8 9 3]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[4 0 5]
+ [1 8 3]
+ [3 0 0]]
 </pre></div>
 </div>
 </div>
@@ -503,9 +506,9 @@ size=(3,3) adalah ukuran kolom baris sebuah matrix</p></li>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[7 7 5]
- [6 4 6]
- [4 9 2]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[2 8 6]
+ [3 9 2]
+ [1 9 4]]
 </pre></div>
 </div>
 </div>
@@ -534,13 +537,13 @@ Syntax “transpose()” digunakan untuk menghasilkan transpos dari matriks A. T
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matrix A
-[[7 2 0]
- [3 3 5]
- [4 3 8]]
+[[9 4 3]
+ [5 9 1]
+ [2 0 0]]
 Matrix A yang sudah di transpose
-[[7 3 4]
- [2 3 3]
- [0 5 8]]
+[[9 5 2]
+ [4 9 0]
+ [3 1 0]]
 </pre></div>
 </div>
 </div>
@@ -571,8 +574,28 @@ Shape digunakan untuk mendapatkan tuple yang menyatakan dimensi dari array/matri
 </div>
 </section>
 </section>
-<section id="mengalikan-matrix-menggunakan-program-python">
-<h2>Mengalikan Matrix Menggunakan Program Python<a class="headerlink" href="#mengalikan-matrix-menggunakan-program-python" title="Link to this heading">#</a></h2>
+<section id="perkalian-matrix">
+<h2>Perkalian Matrix<a class="headerlink" href="#perkalian-matrix" title="Link to this heading">#</a></h2>
+<p>Perkalian matriks adalah operasi matematika yang menggabungkan dua matriks untuk menghasilkan matriks baru. Untuk melakukan perkalian matriks, jumlah kolom matriks pertama harus sama dengan jumlah baris matriks kedua. Hasilnya adalah matriks baru dengan jumlah baris sama dengan matriks pertama dan jumlah kolom sama dengan matriks kedua</p>
+</section>
+<section id="cara-kerja-perkalian-matrix">
+<h2>Cara Kerja Perkalian Matrix<a class="headerlink" href="#cara-kerja-perkalian-matrix" title="Link to this heading">#</a></h2>
+<p>Perkalian matriks bekerja dengan menggabungkan elemen-elemen matriks pertama dan matriks kedua sesuai dengan aturan perkalian matriks. Berikut adalah langkah-langkah umum cara kerja perkalian matriks:</p>
+<ol class="arabic simple">
+<li><p>Periksa Kesesuaian:
+Pastikan jumlah kolom matriks pertama sama dengan jumlah baris matriks kedua. Jika tidak, maka perkalian matriks tidak bisa dilakukan.</p></li>
+<li><p>Hitung Elemen Baru:
+Untuk setiap elemen C[i][j] dalam matriks hasil C, lakukan perkalian antara baris i dari matriks pertama dengan kolom j dari matriks kedua. Misalnya, untuk menghitung C[1][1], perkalian dilakukan antara elemen-elemen baris pertama dari matriks pertama dengan elemen-elemen kolom pertama dari matriks kedua.</p></li>
+<li><p>Jumlahkan Hasil:
+Setelah melakukan perkalian, jumlahkan hasil perkalian untuk mendapatkan nilai elemen C[i][j] yang baru.</p></li>
+<li><p>Ulangi Langkah 2-3:
+Lakukan langkah-langkah 2 dan 3 untuk setiap elemen matriks hasil C.</p></li>
+<li><p>Hasil Akhir:
+Setelah semua elemen matriks hasil C dihitung, Anda akan mendapatkan matriks hasil yang merupakan hasil perkalian dari matriks pertama dan matriks kedua.</p></li>
+</ol>
+</section>
+<section id="cara-mengalikan-matrix-menggunakan-program-python-secara-manual">
+<h2>Cara Mengalikan Matrix Menggunakan Program Python Secara Manual<a class="headerlink" href="#cara-mengalikan-matrix-menggunakan-program-python-secara-manual" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">listA</span> <span class="o">=</span> <span class="p">[</span>
@@ -640,6 +663,9 @@ hasil dari perkalian matrix
 </div>
 </div>
 </div>
+</section>
+<section id="cara-mengalikan-matrix-menggunakan-program-python-dengan-library-numpy">
+<h2>Cara Mengalikan Matrix Menggunakan Program Python Dengan Library Numpy<a class="headerlink" href="#cara-mengalikan-matrix-menggunakan-program-python-dengan-library-numpy" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([(</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span>
@@ -736,7 +762,10 @@ hasil dari perkalian matrix
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cara-mengetahui-shape-matrix-menggunakan-program-python">Cara Mengetahui Shape Matrix Menggunakan Program Python</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengalikan-matrix-menggunakan-program-python">Mengalikan Matrix Menggunakan Program Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perkalian-matrix">Perkalian Matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cara-kerja-perkalian-matrix">Cara Kerja Perkalian Matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cara-mengalikan-matrix-menggunakan-program-python-secara-manual">Cara Mengalikan Matrix Menggunakan Program Python Secara Manual</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cara-mengalikan-matrix-menggunakan-program-python-dengan-library-numpy">Cara Mengalikan Matrix Menggunakan Program Python Dengan Library Numpy</a></li>
 </ul>
   </nav></div>
 

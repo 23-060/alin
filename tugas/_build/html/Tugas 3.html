@@ -62,6 +62,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Tugas 3';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Determinan" href="Tugas%204.html" />
     <link rel="prev" title="Aljabar Matrix" href="Tugas%202.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -182,6 +183,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Tugas%201.html">Eliminasi Gaus</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas%202.html">Aljabar Matrix</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Matrix Invers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas%204.html">Determinan</a></li>
 </ul>
 
     </div>
@@ -441,57 +443,57 @@ Misal kita memiliki Matriks A, Jika ada sebuah matriks B sedemikian rupa, sehing
 <p>Metode Gauss-Jordan merupakan salah satu varian dari eliminasi Gaussian yang dilakukan dengan cara operasi reduksi baris untuk mencari invers suatu matriks.</p>
 <p>1 Misal kita mau mencari invers dari sebuah matriks 3x3
 A =</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f46b8144-dd77-4376-87c2-e074cd4e43bd">
-<span class="eqno">(1)<a class="headerlink" href="#equation-f46b8144-dd77-4376-87c2-e074cd4e43bd" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-a9aabb4f-6b5c-48ef-a5ee-5a9a12944aa3">
+<span class="eqno">(1)<a class="headerlink" href="#equation-a9aabb4f-6b5c-48ef-a5ee-5a9a12944aa3" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
 1 &amp; 2 &amp; 3\\ 
 0 &amp; 1 &amp; 4\\ 
 5 &amp; 6 &amp; 0
 \end{bmatrix}\]</div>
 <p>I =</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a74041da-b801-4664-811b-19b4292ccddb">
-<span class="eqno">(2)<a class="headerlink" href="#equation-a74041da-b801-4664-811b-19b4292ccddb" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-233b0bf8-01a8-4fbd-a564-bd69704b5c36">
+<span class="eqno">(2)<a class="headerlink" href="#equation-233b0bf8-01a8-4fbd-a564-bd69704b5c36" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
 1 &amp; 0 &amp; 0\\
 0 &amp; 1 &amp; 0\\
 0 &amp; 0 &amp; 1\\
 \end{bmatrix}\]</div>
 <p>2.Setelah itu kita menggunakan eliminasi gaus jordan</p>
-<div class="amsmath math notranslate nohighlight" id="equation-db420702-657e-4512-aad3-2013060c8e5a">
-<span class="eqno">(3)<a class="headerlink" href="#equation-db420702-657e-4512-aad3-2013060c8e5a" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-285f2ca9-40b3-4424-9f70-3a5b6f355e24">
+<span class="eqno">(3)<a class="headerlink" href="#equation-285f2ca9-40b3-4424-9f70-3a5b6f355e24" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
 1 &amp; 2 &amp; 3 | 1 &amp; 0 &amp; 0\\
 0 &amp; 1 &amp; 4 | 0 &amp; 1 &amp; 0\\
 5 &amp; 6 &amp; 0 | 0 &amp; 0 &amp; 1\\
 \end{bmatrix}\]</div>
 <p>3.Sekarang kita kurangkan baris ketiga dengan 5x baris pertama</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ca2439cc-9536-43de-9854-de204407072a">
-<span class="eqno">(4)<a class="headerlink" href="#equation-ca2439cc-9536-43de-9854-de204407072a" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-491e9ca8-dac6-4cdc-a3a6-92bf3d10740a">
+<span class="eqno">(4)<a class="headerlink" href="#equation-491e9ca8-dac6-4cdc-a3a6-92bf3d10740a" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
 1 &amp; 2 &amp; 3 | 1 &amp; 0 &amp; 0\\
 0 &amp; 1 &amp; 4 | 0 &amp; 1 &amp; 0\\
 0 &amp; -4 &amp; -15 | -5 &amp; 0 &amp; 1\\
 \end{bmatrix}\]</div>
 <p>4.Dari matriks diatas, kita tambahkan baris ke 3 dengan 4kali baris ke dua</p>
-<div class="amsmath math notranslate nohighlight" id="equation-cef438a0-9336-43ad-8154-5313f977c9f0">
-<span class="eqno">(5)<a class="headerlink" href="#equation-cef438a0-9336-43ad-8154-5313f977c9f0" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-8304157b-72c4-445e-8eef-e49052de647b">
+<span class="eqno">(5)<a class="headerlink" href="#equation-8304157b-72c4-445e-8eef-e49052de647b" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
 1 &amp; 2 &amp; 3 | 1 &amp; 0 &amp; 0\\
 0 &amp; 1 &amp; 4 | 0 &amp; 1 &amp; 0\\
 0 &amp; 0 &amp; 1 | -5 &amp; 4 &amp; 1\\
 \end{bmatrix}\]</div>
 <p>5.Selanjutnya kita kurangkan baris kedua dengan 4x baris ketiga, dan kita kurangkan juga baris pertama dengan 3x baris ketiga</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d2ba54d1-3068-4527-a0dc-a10ab0e68997">
-<span class="eqno">(6)<a class="headerlink" href="#equation-d2ba54d1-3068-4527-a0dc-a10ab0e68997" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-0aad8ff5-1dca-4ac0-a949-ee365f13d9cd">
+<span class="eqno">(6)<a class="headerlink" href="#equation-0aad8ff5-1dca-4ac0-a949-ee365f13d9cd" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
 1 &amp; 2 &amp; 0 | 16 &amp; -12 &amp; -3\\
 0 &amp; 1 &amp; 0 | 20 &amp; -15 &amp; -4\\
 0 &amp; 0 &amp; 1 | -5 &amp; 4 &amp; 1\\
 \end{bmatrix}\]</div>
 <p>6.langkah terakhir kita kurangkan baris pertama dengan 2x baris kedua</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0323f938-107d-4b8f-acf5-b9a206b3948a">
-<span class="eqno">(7)<a class="headerlink" href="#equation-0323f938-107d-4b8f-acf5-b9a206b3948a" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-96e4cdc9-29e3-44cc-b6a2-aee0ed3426f4">
+<span class="eqno">(7)<a class="headerlink" href="#equation-96e4cdc9-29e3-44cc-b6a2-aee0ed3426f4" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
 1 &amp; 0 &amp; 0 | -24 &amp; 18 &amp; 5\\
 0 &amp; 1 &amp; 0 | 20 &amp; -15 &amp; -4\\
 0 &amp; 0 &amp; 1 | -5 &amp; 4 &amp; 1\\
 \end{bmatrix}\]</div>
 <p>Maka invers dari matriks A adalah :</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ecb6663c-ef61-40d2-9c53-a6b74b5a977e">
-<span class="eqno">(8)<a class="headerlink" href="#equation-ecb6663c-ef61-40d2-9c53-a6b74b5a977e" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-4954dcc0-f059-48a4-8165-36252163f3c2">
+<span class="eqno">(8)<a class="headerlink" href="#equation-4954dcc0-f059-48a4-8165-36252163f3c2" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
 -24 &amp; 18 &amp; 5\\
 20 &amp; -15 &amp; -4\\
 -5 &amp; 4 &amp; 1\\
@@ -782,8 +784,8 @@ Hasil :
 </div>
 </div>
 <p>Maka invers dari matriks A adalah :</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5ef40a16-0815-4194-b786-0b59c1004257">
-<span class="eqno">(9)<a class="headerlink" href="#equation-5ef40a16-0815-4194-b786-0b59c1004257" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-4ae852d6-3b80-4906-bea2-de08902a6c0e">
+<span class="eqno">(9)<a class="headerlink" href="#equation-4ae852d6-3b80-4906-bea2-de08902a6c0e" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
 -24 &amp; 18 &amp; 5\\
 20 &amp; -15 &amp; -4\\
 -5 &amp; 4 &amp; 1\\
@@ -1464,6 +1466,15 @@ print(A)</p>
         <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title">Aljabar Matrix</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="Tugas%204.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Determinan</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>

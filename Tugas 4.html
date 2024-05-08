@@ -430,6 +430,17 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sekarang-kita-jumblahkan-semua-hasil">Sekarang kita jumblahkan semua hasil</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proses-menghitung-determinan-matriks-4x4-bebas-menggunakan-ekspansi-kofaktor">Proses menghitung determinan matriks 4x4 bebas menggunakan ekspansi kofaktor</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tentukan-matriks-dan-ordo">Tentukan Matriks dan Ordo:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gunakan-ekspansi-kofaktor">Gunakan Ekspansi Kofaktor:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hitung-determinan">Hitung Determinan:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-penjumlahan-untuk-baris-pertama">Rumus Penjumlahan untuk Baris Pertama:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-langkah-lengkap">Langkah-Langkah Lengkap:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Hitung Determinan:</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -564,8 +575,8 @@ Determinan digunakan dalam berbagai konteks dalam aljabar linear, seperti untuk 
 <h2>Cara Menghitung Determinan Dengan Cara Manual<a class="headerlink" href="#cara-menghitung-determinan-dengan-cara-manual" title="Link to this heading">#</a></h2>
 <section id="pertama-kita-memiliki-matrik-dengan-ordo-4x4-untuk-di-cari-determinannya">
 <h3>Pertama Kita Memiliki matrik dengan ordo 4x4 untuk di cari determinannya<a class="headerlink" href="#pertama-kita-memiliki-matrik-dengan-ordo-4x4-untuk-di-cari-determinannya" title="Link to this heading">#</a></h3>
-<div class="amsmath math notranslate nohighlight" id="equation-43a6316a-c844-488d-a260-7c4f7abb8db4">
-<span class="eqno">(10)<a class="headerlink" href="#equation-43a6316a-c844-488d-a260-7c4f7abb8db4" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-7682b152-3cee-4248-b4a8-6cc4a5c9d257">
+<span class="eqno">(10)<a class="headerlink" href="#equation-7682b152-3cee-4248-b4a8-6cc4a5c9d257" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
 1 &amp; 0 &amp; 4 &amp; -6\\
 2 &amp; 5 &amp; 0 &amp; 3\\
 -1 &amp; 2 &amp; 3 &amp; 5\\
@@ -574,8 +585,8 @@ Determinan digunakan dalam berbagai konteks dalam aljabar linear, seperti untuk 
 </section>
 <section id="kita-hilangkan-baris-1-kolom-1-pada-matriks-di-atas-dan-membuat-matriks-3x3">
 <h3>Kita Hilangkan baris 1 kolom 1 pada matriks di atas dan membuat matriks 3x3<a class="headerlink" href="#kita-hilangkan-baris-1-kolom-1-pada-matriks-di-atas-dan-membuat-matriks-3x3" title="Link to this heading">#</a></h3>
-<div class="amsmath math notranslate nohighlight" id="equation-c4c22835-9778-4dc7-8476-97b2ea3050fc">
-<span class="eqno">(11)<a class="headerlink" href="#equation-c4c22835-9778-4dc7-8476-97b2ea3050fc" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-2f4a25ef-440c-4e7e-8f60-23e74e63598e">
+<span class="eqno">(11)<a class="headerlink" href="#equation-2f4a25ef-440c-4e7e-8f60-23e74e63598e" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
 5 &amp; 0 &amp; 3\\
 2 &amp; 3 &amp; 5\\
 1 &amp; -2 &amp; 3\\
@@ -583,8 +594,8 @@ Determinan digunakan dalam berbagai konteks dalam aljabar linear, seperti untuk 
 </section>
 <section id="kita-hilangkan-baris-1-kolom-1-pada-matriks-di-atas-dan-membuat-matriks-2x2">
 <h3>kita hilangkan baris 1 kolom 1 pada matriks di atas dan membuat matriks 2x2<a class="headerlink" href="#kita-hilangkan-baris-1-kolom-1-pada-matriks-di-atas-dan-membuat-matriks-2x2" title="Link to this heading">#</a></h3>
-<div class="amsmath math notranslate nohighlight" id="equation-19d181ac-ae1f-457d-8674-00a4472a1e98">
-<span class="eqno">(12)<a class="headerlink" href="#equation-19d181ac-ae1f-457d-8674-00a4472a1e98" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-09eddc55-554a-407a-8439-df47f3a3117d">
+<span class="eqno">(12)<a class="headerlink" href="#equation-09eddc55-554a-407a-8439-df47f3a3117d" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
 3 &amp; 5\\
 -2 &amp; 3\\
 \end{bmatrix}\]</div>
@@ -597,8 +608,8 @@ Determinan digunakan dalam berbagai konteks dalam aljabar linear, seperti untuk 
 </section>
 <section id="kita-hilangkan-baris-1-kolom-3-pada-matriks-3x3-di-atas-menjadi-2x2">
 <h3>Kita hilangkan baris 1 kolom 3 pada matriks 3x3 di atas menjadi 2x2<a class="headerlink" href="#kita-hilangkan-baris-1-kolom-3-pada-matriks-3x3-di-atas-menjadi-2x2" title="Link to this heading">#</a></h3>
-<div class="amsmath math notranslate nohighlight" id="equation-6e924fac-bbb7-4190-9f24-e7b96d6527fc">
-<span class="eqno">(13)<a class="headerlink" href="#equation-6e924fac-bbb7-4190-9f24-e7b96d6527fc" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-9ac8d9d4-c6f7-478d-9301-a2195da7e57d">
+<span class="eqno">(13)<a class="headerlink" href="#equation-9ac8d9d4-c6f7-478d-9301-a2195da7e57d" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
 2 &amp; 3\\
 1 &amp; -2\\
 \end{bmatrix}\]</div>
@@ -616,8 +627,8 @@ Determinan digunakan dalam berbagai konteks dalam aljabar linear, seperti untuk 
 </section>
 <section id="sekarang-kita-hilangkan-baris-1-kolom-3-nya">
 <h3>Sekarang kita hilangkan baris 1 kolom 3 nya<a class="headerlink" href="#sekarang-kita-hilangkan-baris-1-kolom-3-nya" title="Link to this heading">#</a></h3>
-<div class="amsmath math notranslate nohighlight" id="equation-4f324494-b825-4c57-a5af-42146efcbc53">
-<span class="eqno">(14)<a class="headerlink" href="#equation-4f324494-b825-4c57-a5af-42146efcbc53" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-c9b907d2-1bb5-4982-b331-c79107863189">
+<span class="eqno">(14)<a class="headerlink" href="#equation-c9b907d2-1bb5-4982-b331-c79107863189" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
 1 &amp; 0 &amp; 4 &amp; -6\\
 2 &amp; 5 &amp; 0 &amp; 3\\
 -1 &amp; 2 &amp; 3 &amp; 5\\
@@ -626,27 +637,27 @@ Determinan digunakan dalam berbagai konteks dalam aljabar linear, seperti untuk 
 </section>
 <section id="lakukan-hal-yang-sama-seperti-di-atas">
 <h3>Lakukan hal yang sama seperti di atas<a class="headerlink" href="#lakukan-hal-yang-sama-seperti-di-atas" title="Link to this heading">#</a></h3>
-<div class="amsmath math notranslate nohighlight" id="equation-b86327c3-7b0f-475c-90c8-f2e633fda9a2">
-<span class="eqno">(15)<a class="headerlink" href="#equation-b86327c3-7b0f-475c-90c8-f2e633fda9a2" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-51184ca3-3ff0-4f9a-8452-c64786a0c110">
+<span class="eqno">(15)<a class="headerlink" href="#equation-51184ca3-3ff0-4f9a-8452-c64786a0c110" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
 2 &amp; 5 &amp; 3\\
 -1 &amp; 2 &amp; 5\\
 2 &amp; 1 &amp; 3\\
 \end{bmatrix}\]</div>
 <p>2 =</p>
-<div class="amsmath math notranslate nohighlight" id="equation-99630117-dcdb-4251-a5b4-afc1aad014e2">
-<span class="eqno">(16)<a class="headerlink" href="#equation-99630117-dcdb-4251-a5b4-afc1aad014e2" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-4b28a768-5763-42a0-802a-0e066a81b248">
+<span class="eqno">(16)<a class="headerlink" href="#equation-4b28a768-5763-42a0-802a-0e066a81b248" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
 2 &amp; 5\\
 1 &amp; 3\\
 \end{bmatrix}\]</div>
 <p>-5 =</p>
-<div class="amsmath math notranslate nohighlight" id="equation-dad6b0fc-1ae8-4aee-a778-7cdfbfe4f5b3">
-<span class="eqno">(17)<a class="headerlink" href="#equation-dad6b0fc-1ae8-4aee-a778-7cdfbfe4f5b3" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-254b77a9-a189-4822-a94c-96764a473760">
+<span class="eqno">(17)<a class="headerlink" href="#equation-254b77a9-a189-4822-a94c-96764a473760" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
 -1 &amp; 5\\
 2 &amp; 3\\
 \end{bmatrix}\]</div>
 <p>+3 =</p>
-<div class="amsmath math notranslate nohighlight" id="equation-66bdcb69-43ea-482c-a89e-643649fad713">
-<span class="eqno">(18)<a class="headerlink" href="#equation-66bdcb69-43ea-482c-a89e-643649fad713" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-2465d678-18ea-4bff-bb3b-e68016668cee">
+<span class="eqno">(18)<a class="headerlink" href="#equation-2465d678-18ea-4bff-bb3b-e68016668cee" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
 -1 &amp; 2\\
 2 &amp; 1\\
 \end{bmatrix}\]</div>
@@ -655,8 +666,8 @@ Determinan digunakan dalam berbagai konteks dalam aljabar linear, seperti untuk 
 </section>
 <section id="sekarang-kita-hilangkan-baris-1-kolom-4-nya">
 <h3>Sekarang kita hilangkan baris 1 kolom 4 nya<a class="headerlink" href="#sekarang-kita-hilangkan-baris-1-kolom-4-nya" title="Link to this heading">#</a></h3>
-<div class="amsmath math notranslate nohighlight" id="equation-689c72fd-29ae-44bf-9f45-91d737719d2f">
-<span class="eqno">(19)<a class="headerlink" href="#equation-689c72fd-29ae-44bf-9f45-91d737719d2f" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-69b52488-f8dc-43c3-96af-8aefc5010fae">
+<span class="eqno">(19)<a class="headerlink" href="#equation-69b52488-f8dc-43c3-96af-8aefc5010fae" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
 1 &amp; 0 &amp; 4 &amp; -6\\
 2 &amp; 5 &amp; 0 &amp; 3\\
 -1 &amp; 2 &amp; 3 &amp; 5\\
@@ -665,27 +676,27 @@ Determinan digunakan dalam berbagai konteks dalam aljabar linear, seperti untuk 
 </section>
 <section id="lakukan-hal-yang-sama-juga">
 <h3>Lakukan Hal Yang Sama juga<a class="headerlink" href="#lakukan-hal-yang-sama-juga" title="Link to this heading">#</a></h3>
-<div class="amsmath math notranslate nohighlight" id="equation-9fd3c6c8-a6a2-460e-826d-fbe91917beed">
-<span class="eqno">(20)<a class="headerlink" href="#equation-9fd3c6c8-a6a2-460e-826d-fbe91917beed" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-d30f3f20-96df-4510-ba8a-fc79df33f154">
+<span class="eqno">(20)<a class="headerlink" href="#equation-d30f3f20-96df-4510-ba8a-fc79df33f154" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
 2 &amp; 5 &amp; 0\\
 -1 &amp; 2 &amp; 3\\
 2 &amp; 1 &amp; -2\\
 \end{bmatrix}\]</div>
 <p>+2 =</p>
-<div class="amsmath math notranslate nohighlight" id="equation-470f7991-dcc8-4e02-bfaf-f8cbd5cc6ed9">
-<span class="eqno">(21)<a class="headerlink" href="#equation-470f7991-dcc8-4e02-bfaf-f8cbd5cc6ed9" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-603c37e3-e3fe-40bf-9b3b-2b41229ad5bc">
+<span class="eqno">(21)<a class="headerlink" href="#equation-603c37e3-e3fe-40bf-9b3b-2b41229ad5bc" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
 2 &amp; 3\\
 1 &amp; -2\\
 \end{bmatrix}\]</div>
 <p>-5 =</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5b206280-f846-47ab-ab57-715b439e0a0e">
-<span class="eqno">(22)<a class="headerlink" href="#equation-5b206280-f846-47ab-ab57-715b439e0a0e" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-c3a4c915-66ad-44ca-9d03-f9836c5d44c8">
+<span class="eqno">(22)<a class="headerlink" href="#equation-c3a4c915-66ad-44ca-9d03-f9836c5d44c8" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
 -1 &amp; 3\\
 2 &amp; -2\\
 \end{bmatrix}\]</div>
 <p>+0 =</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0775bdc4-0e92-4d39-b741-2d8039c124b8">
-<span class="eqno">(23)<a class="headerlink" href="#equation-0775bdc4-0e92-4d39-b741-2d8039c124b8" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-7586167b-90d2-4ff7-ad04-ad7edb766a44">
+<span class="eqno">(23)<a class="headerlink" href="#equation-7586167b-90d2-4ff7-ad04-ad7edb766a44" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
 -1 &amp; 2\\
 2 &amp; 1\\
 \end{bmatrix}\]</div>
@@ -698,8 +709,8 @@ Determinan digunakan dalam berbagai konteks dalam aljabar linear, seperti untuk 
 <h3>Sekarang kita jumblahkan semua hasil<a class="headerlink" href="#sekarang-kita-jumblahkan-semua-hasil" title="Link to this heading">#</a></h3>
 <p>74 + 208 + 36 = 318</p>
 <p>Maka Hasil Determinan dari matriks</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0378a8f7-8cfa-4012-b240-5dfc8ed61752">
-<span class="eqno">(24)<a class="headerlink" href="#equation-0378a8f7-8cfa-4012-b240-5dfc8ed61752" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-7c2e877f-94c1-4398-ae81-93b9b86d2ecf">
+<span class="eqno">(24)<a class="headerlink" href="#equation-7c2e877f-94c1-4398-ae81-93b9b86d2ecf" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
 1 &amp; 0 &amp; 4 &amp; -6\\
 2 &amp; 5 &amp; 0 &amp; 3\\
 -1 &amp; 2 &amp; 3 &amp; 5\\
@@ -727,6 +738,96 @@ Determinan digunakan dalam berbagai konteks dalam aljabar linear, seperti untuk 
 </div>
 </div>
 </div>
+</section>
+</section>
+<section id="proses-menghitung-determinan-matriks-4x4-bebas-menggunakan-ekspansi-kofaktor">
+<h2>Proses menghitung determinan matriks 4x4 bebas menggunakan ekspansi kofaktor<a class="headerlink" href="#proses-menghitung-determinan-matriks-4x4-bebas-menggunakan-ekspansi-kofaktor" title="Link to this heading">#</a></h2>
+<section id="tentukan-matriks-dan-ordo">
+<h3>Tentukan Matriks dan Ordo:<a class="headerlink" href="#tentukan-matriks-dan-ordo" title="Link to this heading">#</a></h3>
+<p>Misalkan matriks yang diberikan adalah ( A ) dengan ordo ( 4 \times 4 ):
+A =</p>
+<div class="amsmath math notranslate nohighlight" id="equation-e207d1e1-4e19-4c4b-8467-e1e048851605">
+<span class="eqno">(25)<a class="headerlink" href="#equation-e207d1e1-4e19-4c4b-8467-e1e048851605" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+   1 &amp; 0 &amp; 4 &amp; -6 \\
+   2 &amp; 5 &amp; 0 &amp; 3 \\
+   -1 &amp; 2 &amp; 3 &amp; 5 \\
+   2 &amp; 1 &amp; -2 &amp; 3 \\
+   \end{bmatrix}\]</div>
+</section>
+<section id="gunakan-ekspansi-kofaktor">
+<h3>Gunakan Ekspansi Kofaktor:<a class="headerlink" href="#gunakan-ekspansi-kofaktor" title="Link to this heading">#</a></h3>
+<p>Misalkan kita ingin menghitung determinan menggunakan ekspansi kofaktor terhadap baris pertama. Rumusnya adalah:</p>
+<div class="math notranslate nohighlight">
+\[
+   \det(A) = \sum_{j=1}^n (-1)^{1+j} a_{1j} \det(M_{1j})
+    \]</div>
+</section>
+</section>
+<section id="hitung-determinan">
+<h2>Hitung Determinan:<a class="headerlink" href="#hitung-determinan" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Langkah 1: Pilih baris pertama, sehingga  i = 1.</p></li>
+<li><p>Langkah 2: Untuk setiap  j  dari 1 sampai  n  (dalam kasus ini,  n = 4 ), hitung  (-1)^{1+j} a_{1j} \det(M_{1j}) dan jumlahkan hasilnya.</p></li>
+</ul>
+<section id="rumus-penjumlahan-untuk-baris-pertama">
+<h3>Rumus Penjumlahan untuk Baris Pertama:<a class="headerlink" href="#rumus-penjumlahan-untuk-baris-pertama" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[
+   \det(A) = a_{11} \det(M_{11}) - a_{12} \det(M_{12}) + a_{13} \det(M_{13}) - a_{14} \det(M_{14})
+   \]</div>
+<p>di mana:</p>
+<div class="math notranslate nohighlight">
+\[ a_{11} = 1 \]</div>
+<div class="math notranslate nohighlight">
+\[ a_{12} = 0 \]</div>
+<div class="math notranslate nohighlight">
+\[ a_{13} = 4 \]</div>
+<div class="math notranslate nohighlight">
+\[ a_{14} = -6 \]</div>
+<div class="math notranslate nohighlight">
+\[ \det(M_{11}), \det(M_{12}), \det(M_{13}), \det(M_{14}) \]</div>
+<p>adalah determinan dari matriks minor yang sesuai.</p>
+</section>
+<section id="langkah-langkah-lengkap">
+<h3>Langkah-Langkah Lengkap:<a class="headerlink" href="#langkah-langkah-lengkap" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Hitung $<span class="math notranslate nohighlight">\( \det(M_{11}) \)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(
+M_{11} = \begin{bmatrix} 5 &amp; 0 &amp; 3 \\ 2 &amp; 3 &amp; 5 \\ 1 &amp; -2 &amp; 3 \end{bmatrix}
+\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(
+\det(M_{11}) = 5(3) - 0(5) + 2(5) = 15 + 10 = 25
+\)</span>$</p></li>
+<li><p>Hitung $<span class="math notranslate nohighlight">\( \det(M_{12}) \)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(
+M_{12} = \begin{bmatrix} 2 &amp; 0 &amp; 3 \\ -1 &amp; 3 &amp; 5 \\ 2 &amp; -2 &amp; 3 \end{bmatrix}
+\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(
+\det(M_{12}) = 2(3) - 0(5) + (-1)(5) = 6 - 5 = 1
+\)</span>$</p></li>
+<li><p>Hitung $<span class="math notranslate nohighlight">\( \det(M_{13}) \)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(
+M_{13} = \begin{bmatrix} 2 &amp; 5 &amp; 3 \\ -1 &amp; 2 &amp; 5 \\ 2 &amp; 1 &amp; 3 \end{bmatrix}
+\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(
+\det(M_{13}) = 2(6) - 5(3) + (-1)(11) = 12 - 15 - 11 = -14
+\)</span>$</p></li>
+<li><p>Hitung $<span class="math notranslate nohighlight">\( \det(M_{14}) \)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(
+M_{14} = \begin{bmatrix} 2 &amp; 5 &amp; 0 \\ -1 &amp; 2 &amp; 3 \\ 2 &amp; 1 &amp; -2 \end{bmatrix}
+\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(
+\det(M_{14}) = 2(2(-2) - 3(1)) - 5(-1(-2) - 3(2)) = 2(-4 - 3) - 5(2 + 6) = -14 - 40 = -54
+\)</span>$</p></li>
+</ul>
+</section>
+<section id="id1">
+<h3>Hitung Determinan:<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[
+\det(A) = (1)(25) - (0)(1) + (4)(-14) - (-6)(-54) = 25 + 0 - 56 + 324 = 293
+\]</div>
+<p>Jadi, determinan dari matriks A menggunakan metode ekspansi kofaktor terhadap baris pertama adalah $<span class="math notranslate nohighlight">\( \det(A) = 293 \)</span>$</p>
 </section>
 </section>
 </section>
@@ -805,6 +906,17 @@ Determinan digunakan dalam berbagai konteks dalam aljabar linear, seperti untuk 
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sekarang-kita-hilangkan-baris-1-kolom-4-nya">Sekarang kita hilangkan baris 1 kolom 4 nya</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lakukan-hal-yang-sama-juga">Lakukan Hal Yang Sama juga</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sekarang-kita-jumblahkan-semua-hasil">Sekarang kita jumblahkan semua hasil</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proses-menghitung-determinan-matriks-4x4-bebas-menggunakan-ekspansi-kofaktor">Proses menghitung determinan matriks 4x4 bebas menggunakan ekspansi kofaktor</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tentukan-matriks-dan-ordo">Tentukan Matriks dan Ordo:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gunakan-ekspansi-kofaktor">Gunakan Ekspansi Kofaktor:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hitung-determinan">Hitung Determinan:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-penjumlahan-untuk-baris-pertama">Rumus Penjumlahan untuk Baris Pertama:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-langkah-lengkap">Langkah-Langkah Lengkap:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Hitung Determinan:</a></li>
 </ul>
 </li>
 </ul>

@@ -448,57 +448,57 @@ Misal kita memiliki Matriks A, Jika ada sebuah matriks B sedemikian rupa, sehing
 <p>Metode Gauss-Jordan merupakan salah satu varian dari eliminasi Gaussian yang dilakukan dengan cara operasi reduksi baris untuk mencari invers suatu matriks.</p>
 <p>1 Misal kita mau mencari invers dari sebuah matriks 3x3
 A =</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3fd58296-8a5a-4e26-b882-018b6fe9a297">
-<span class="eqno">(1)<a class="headerlink" href="#equation-3fd58296-8a5a-4e26-b882-018b6fe9a297" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-46e356ed-3177-45fb-94d5-a85be00e044b">
+<span class="eqno">(1)<a class="headerlink" href="#equation-46e356ed-3177-45fb-94d5-a85be00e044b" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
 1 &amp; 2 &amp; 3\\ 
 0 &amp; 1 &amp; 4\\ 
 5 &amp; 6 &amp; 0
 \end{bmatrix}\]</div>
 <p>I =</p>
-<div class="amsmath math notranslate nohighlight" id="equation-86b60f55-5092-4962-9cd4-15050c5d2c1b">
-<span class="eqno">(2)<a class="headerlink" href="#equation-86b60f55-5092-4962-9cd4-15050c5d2c1b" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-272d336b-6e0b-433b-a855-1e81e9e358e1">
+<span class="eqno">(2)<a class="headerlink" href="#equation-272d336b-6e0b-433b-a855-1e81e9e358e1" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
 1 &amp; 0 &amp; 0\\
 0 &amp; 1 &amp; 0\\
 0 &amp; 0 &amp; 1\\
 \end{bmatrix}\]</div>
 <p>2.Setelah itu kita menggunakan eliminasi gaus jordan</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c9319272-55e6-4cb9-97f9-fdff7edb3b5c">
-<span class="eqno">(3)<a class="headerlink" href="#equation-c9319272-55e6-4cb9-97f9-fdff7edb3b5c" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-9e871bc5-f8d4-448d-a93a-5de083d5526e">
+<span class="eqno">(3)<a class="headerlink" href="#equation-9e871bc5-f8d4-448d-a93a-5de083d5526e" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
 1 &amp; 2 &amp; 3 | 1 &amp; 0 &amp; 0\\
 0 &amp; 1 &amp; 4 | 0 &amp; 1 &amp; 0\\
 5 &amp; 6 &amp; 0 | 0 &amp; 0 &amp; 1\\
 \end{bmatrix}\]</div>
 <p>3.Sekarang kita kurangkan baris ketiga dengan 5x baris pertama</p>
-<div class="amsmath math notranslate nohighlight" id="equation-922fb941-59b9-463c-baf4-ebff60f1a77c">
-<span class="eqno">(4)<a class="headerlink" href="#equation-922fb941-59b9-463c-baf4-ebff60f1a77c" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-ce2482f9-672a-4111-baa8-00c038e55604">
+<span class="eqno">(4)<a class="headerlink" href="#equation-ce2482f9-672a-4111-baa8-00c038e55604" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
 1 &amp; 2 &amp; 3 | 1 &amp; 0 &amp; 0\\
 0 &amp; 1 &amp; 4 | 0 &amp; 1 &amp; 0\\
 0 &amp; -4 &amp; -15 | -5 &amp; 0 &amp; 1\\
 \end{bmatrix}\]</div>
 <p>4.Dari matriks diatas, kita tambahkan baris ke 3 dengan 4kali baris ke dua</p>
-<div class="amsmath math notranslate nohighlight" id="equation-eee6350e-82fa-45a2-ad93-0e1032f959d9">
-<span class="eqno">(5)<a class="headerlink" href="#equation-eee6350e-82fa-45a2-ad93-0e1032f959d9" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-402209e9-772d-45c2-b908-c17ddbb65e08">
+<span class="eqno">(5)<a class="headerlink" href="#equation-402209e9-772d-45c2-b908-c17ddbb65e08" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
 1 &amp; 2 &amp; 3 | 1 &amp; 0 &amp; 0\\
 0 &amp; 1 &amp; 4 | 0 &amp; 1 &amp; 0\\
 0 &amp; 0 &amp; 1 | -5 &amp; 4 &amp; 1\\
 \end{bmatrix}\]</div>
 <p>5.Selanjutnya kita kurangkan baris kedua dengan 4x baris ketiga, dan kita kurangkan juga baris pertama dengan 3x baris ketiga</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e54625d1-7808-4c3c-bf4c-1393d48ed79e">
-<span class="eqno">(6)<a class="headerlink" href="#equation-e54625d1-7808-4c3c-bf4c-1393d48ed79e" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-e16c22ec-1c95-468a-ad02-35c785bcac45">
+<span class="eqno">(6)<a class="headerlink" href="#equation-e16c22ec-1c95-468a-ad02-35c785bcac45" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
 1 &amp; 2 &amp; 0 | 16 &amp; -12 &amp; -3\\
 0 &amp; 1 &amp; 0 | 20 &amp; -15 &amp; -4\\
 0 &amp; 0 &amp; 1 | -5 &amp; 4 &amp; 1\\
 \end{bmatrix}\]</div>
 <p>6.langkah terakhir kita kurangkan baris pertama dengan 2x baris kedua</p>
-<div class="amsmath math notranslate nohighlight" id="equation-847236bf-87fe-4d04-bf6d-c94923ab3c17">
-<span class="eqno">(7)<a class="headerlink" href="#equation-847236bf-87fe-4d04-bf6d-c94923ab3c17" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-b388f44a-5268-41cc-a960-5e71acb3c456">
+<span class="eqno">(7)<a class="headerlink" href="#equation-b388f44a-5268-41cc-a960-5e71acb3c456" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
 1 &amp; 0 &amp; 0 | -24 &amp; 18 &amp; 5\\
 0 &amp; 1 &amp; 0 | 20 &amp; -15 &amp; -4\\
 0 &amp; 0 &amp; 1 | -5 &amp; 4 &amp; 1\\
 \end{bmatrix}\]</div>
 <p>Maka invers dari matriks A adalah :</p>
-<div class="amsmath math notranslate nohighlight" id="equation-31114532-7b32-40ec-ac84-7c22672f3154">
-<span class="eqno">(8)<a class="headerlink" href="#equation-31114532-7b32-40ec-ac84-7c22672f3154" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-a3821a1a-14de-442c-97b8-0eb1354a96a6">
+<span class="eqno">(8)<a class="headerlink" href="#equation-a3821a1a-14de-442c-97b8-0eb1354a96a6" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
 -24 &amp; 18 &amp; 5\\
 20 &amp; -15 &amp; -4\\
 -5 &amp; 4 &amp; 1\\
@@ -789,8 +789,8 @@ Hasil :
 </div>
 </div>
 <p>Maka invers dari matriks A adalah :</p>
-<div class="amsmath math notranslate nohighlight" id="equation-818a8b35-b1ab-4474-813f-c8d69d925f50">
-<span class="eqno">(9)<a class="headerlink" href="#equation-818a8b35-b1ab-4474-813f-c8d69d925f50" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-2d359daa-740d-4c51-88ab-50b50b43f225">
+<span class="eqno">(9)<a class="headerlink" href="#equation-2d359daa-740d-4c51-88ab-50b50b43f225" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
 -24 &amp; 18 &amp; 5\\
 20 &amp; -15 &amp; -4\\
 -5 &amp; 4 &amp; 1\\

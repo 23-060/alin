@@ -416,6 +416,8 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Struktur Page dan Link</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#representasi-matriks-adjacency">Representasi Matriks Adjacency</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normalisasi-matriks-adjacency">Normalisasi Matriks Adjacency</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menambahkan-damping-factor">Menambahkan Damping Factor</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-pagerank">Menghitung PageRank</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-iteratif">Langkah Iteratif</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-pada-phython">Implementasi Pada Phython</a></li>
@@ -444,27 +446,33 @@ Page 3 -&gt; Page 1</p>
 <h1>Representasi Matriks Adjacency<a class="headerlink" href="#representasi-matriks-adjacency" title="Link to this heading">#</a></h1>
 <p>Matriks Adjacency A =
 $$</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0b4f41b3-b7a7-4e20-8a44-ab8d90d169a1">
-<span class="eqno">(38)<a class="headerlink" href="#equation-0b4f41b3-b7a7-4e20-8a44-ab8d90d169a1" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-7a3ae5e0-b754-465a-b2f9-f399a28cb36e">
+<span class="eqno">(38)<a class="headerlink" href="#equation-7a3ae5e0-b754-465a-b2f9-f399a28cb36e" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
 0 &amp; 1 &amp; 1\\
 0 &amp; 0 &amp; 1\\
 1 &amp; 0 &amp; 0\\
 \end{bmatrix}\]</div>
+<p>$$</p>
+<section id="normalisasi-matriks-adjacency">
+<h2>Normalisasi Matriks Adjacency<a class="headerlink" href="#normalisasi-matriks-adjacency" title="Link to this heading">#</a></h2>
+<p>Normalisasi dilakukan dengan membagi setiap elemen kolom dengan jumlah total elemen di kolom tersebut.</p>
 <div class="math notranslate nohighlight">
-\[### Normalisasi Matriks Adjacency
-Normalisasi dilakukan dengan membagi setiap elemen kolom dengan jumlah total elemen di kolom tersebut.\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-5d853b90-5977-4311-9bb4-560676c2a06b">
-<span class="eqno">(39)<a class="headerlink" href="#equation-5d853b90-5977-4311-9bb4-560676c2a06b" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+\[\begin{split} 
+\begin{bmatrix}
 0 &amp; 0 &amp; 1\\
 0.5 &amp; 0 &amp; 0\\
 0.5 &amp; 1 &amp; 0\\
-\end{bmatrix}\]</div>
+\end{bmatrix}
+\end{split}\]</div>
+</section>
+<section id="menambahkan-damping-factor">
+<h2>Menambahkan Damping Factor<a class="headerlink" href="#menambahkan-damping-factor" title="Link to this heading">#</a></h2>
+<p>Untuk menghindari dead ends (halaman tanpa outbound links) dan spider traps (loop di mana halaman hanya mengarah ke dirinya sendiri atau halaman lain di loop), kita menambahkan faktor peredam
+d (biasanya 0.85)</p>
 <div class="math notranslate nohighlight">
-\[### Menambahkan Damping Factor
-Untuk menghindari dead ends (halaman tanpa outbound links) dan spider traps (loop di mana halaman hanya mengarah ke dirinya sendiri atau halaman lain di loop), kita menambahkan faktor peredam 
-d (biasanya 0.85)\]</div>
-<p>G = d \times M + \frac{(1-d)}{n} \times \mathbf{1}
-$$</p>
+\[
+G = d \times M + \frac{(1-d)}{n} \times \mathbf{1}
+\]</div>
 <p>Di mana:</p>
 <ul class="simple">
 <li><p>d adalah faktor peredam (biasanya 0.85).</p></li>
@@ -499,6 +507,7 @@ G = \begin{bmatrix}
 0.475 &amp; 0.9 &amp; 0.05 \\
 \end{bmatrix}
 \end{split}\]</div>
+</section>
 <section id="menghitung-pagerank">
 <h2>Menghitung PageRank<a class="headerlink" href="#menghitung-pagerank" title="Link to this heading">#</a></h2>
 <p>Nilai Awal Setiap Halaman :
@@ -629,6 +638,8 @@ PR_{\text{baru}} = G \times PR
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Struktur Page dan Link</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#representasi-matriks-adjacency">Representasi Matriks Adjacency</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normalisasi-matriks-adjacency">Normalisasi Matriks Adjacency</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menambahkan-damping-factor">Menambahkan Damping Factor</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-pagerank">Menghitung PageRank</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-iteratif">Langkah Iteratif</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-pada-phython">Implementasi Pada Phython</a></li>
